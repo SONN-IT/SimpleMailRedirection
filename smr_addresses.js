@@ -344,14 +344,14 @@ debug('we already have a listener');
 	// document.getElementById("closeonsuccess").addEventListener('change', togglecloseonsuccess);
 	document.getElementById("delay").addEventListener('change', changedelay);
 	document.getElementById("debug").addEventListener('change', toggledebug);
-	document.getElementById("default").addEventListener('click', setDefaultAddresses);
-	document.getElementById("default").addEventListener('mouseenter', tooltip);
-	document.getElementById("restore").addEventListener('click', restoreDefaultAddresses);
-	document.getElementById("restore").addEventListener('mouseenter', tooltip);
+	// document.getElementById("default").addEventListener('click', setDefaultAddresses);
+	// document.getElementById("default").addEventListener('mouseenter', tooltip);
+	// document.getElementById("restore").addEventListener('click', restoreDefaultAddresses);
+	// document.getElementById("restore").addEventListener('mouseenter', tooltip);
 	document.getElementById("ab").addEventListener('mouseenter', tooltip);
-	document.getElementById("defName").addEventListener('input', (event)=>{
-      if (event.target.value) event.target.classList.remove('defName');
-                         else event.target.classList.add('defName');});
+	// document.getElementById("defName").addEventListener('input', (event)=>{
+  //     if (event.target.value) event.target.classList.remove('defName');
+  //                        else event.target.classList.add('defName');});
 
 	msgs = await messenger.runtime.sendMessage({action: "requestData", prefs: prefs});
   msgCount=msgs.length;
@@ -594,8 +594,8 @@ debug('tb ml: add '+JSON.stringify(ml));
 	}
 debug('lists: '+mLists.size+' '+JSON.stringify(Array.from(mLists.entries())));
 
-  builddatalist();
-  restoreDefaultAddresses('*');  // restore default set
+  // builddatalist();
+  // restoreDefaultAddresses('*');  // restore default set
 }
 
 function accountchange(ev) {
