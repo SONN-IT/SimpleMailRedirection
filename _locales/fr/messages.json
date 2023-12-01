@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Permet de rediriger (faire « rebondir ») les messages vers d'autres destinataires."
+    },
+    "selected": {
+        "message": "Les messages suivants seront redirigés :"
+    },
+    "subject": {
+        "message": "Sujet"
+    },
+    "from": {
+        "message": "Expéditeur"
+    },
+    "date": {
+        "message": "Date"
+    },
+    "send": {
+        "message": "Envoyer"
+    },
+    "cancel": {
+        "message": "Annuler"
+    },
+    "close": {
+        "message": "Fermer"
+    },
+    "resent": {
+        "message": "Rediriger"
+    },
+    "to": {
+        "message": "Pour"
+    },
+    "sendto": {
+        "message": "Envoyer cet élément à :"
+    },
+    "save": {
+        "message": "Enregistrer ce message"
+    },
+    "recipient": {
+        "message": "Destinataire"
+    },
+    "closeonsuccess": {
+        "message": "Fermer cette fenêtre."
+    },
+    "delay": {
+        "message": "Délai :"
+    },
+    "done": {
+        "message": "Terminé"
+    },
+    "default": {
+        "message": "Enregistrer comme"
+    },
+    "restore": {
+        "message": "Rétablir"
+    },
+    "list": {
+        "message": "de la liste"
+    },
+    "defaulttitle": {
+        "message": "Compte par défaut"
+    },
+    "restoretitle": {
+        "message": "Configuration par défaut"
+    },
+    "openab": {
+        "message": "Ouvrir le carnet d’adresses"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Carnets d’adresses"
+    },
+    "allbooks": {
+        "message": "Tous les carnets d’adresses"
+    },
+    "searchin": {
+        "message": "Rechercher dans :"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

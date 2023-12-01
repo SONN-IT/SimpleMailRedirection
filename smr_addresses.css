@@ -1,0 +1,220 @@
+body {
+	font-size:small;
+	padding: 5px;
+}
+
+/* accounts */
+#from {
+  display:flex;
+  margin-top:1ex;
+  overflow: auto;
+  height: 2.5em;
+}
+#from * {
+  vertical-align: middle;
+}
+
+option.acct {
+  font-weight: bold;
+}
+span.acct {
+  font-style: italic;
+  color: gray;
+}
+option.bb {
+  border-bottom: 1px solid black;
+}
+option.bt {
+  border-top: 1px solid black;
+}
+
+#copy, #changefrom, #debug, #closeonsuccess {
+  width: 12px;
+  height: 12px;
+  margin-inline-end: 3px;
+	margin-left: 5px;
+  vertical-align: middle;
+}
+#maxConn {
+  width: 3em;
+  height: 12px;
+  margin-inline-end: 3px;
+	margin-left: 5px;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+/* selected mails table */
+table {
+	width: max-content;
+	border-collapse: collapse;
+	/*border: 1px solid silver;*/
+	border: 1px solid var(--in-content-table-border-dark-color);
+	font-size: 90%;
+	background-color: var(--in-content-table-background);
+}
+td {
+	/*border: 1px solid silver;*/
+	border: 1px solid var(--in-content-table-border-dark-color);
+	padding: 2px;
+}
+th {
+	/*border: 1px solid silver;*/
+	border: 1px solid var(--in-content-table-border-dark-color);
+	background-color: var(  --in-content-table-header-background);
+	text-align: left;
+}
+
+/* leading icons in the table rows */
+#mails tr + td {
+	width: 16px;
+}
+.remove, .abort {
+	cursor: pointer;
+}
+
+.remove img {
+  content: url(skin/remove.svg);
+}
+.abort img {
+  content: url(skin/abort.svg);
+}
+.sending img {
+  content: url(skin/sending.svg);
+}
+.ok img {
+  content: url(skin/ok.svg);
+}
+.failed img {
+  content: url(skin/failed.svg);
+}
+@media (prefers-color-scheme: dark) {
+  .remove img {
+    content: url(skin/remove-dark.svg);
+  }
+  .abort img {
+    content: url(skin/abort-dark.svg);
+  }
+  .sending img {
+    content: url(skin/sending-dark.svg);
+  }
+  .ok img {
+    content: url(skin/ok-dark.svg);
+  }
+  .failed img {
+    content: url(skin/failed-dark.svg);
+  }
+}
+.pointer {
+	cursor: pointer;
+}
+.done {
+	text-decoration-line: line-through;
+}
+
+
+/* address input box */
+#ab {	/*open addressbook icon*/
+	background-color: lightgray;
+}
+input[type="text"] {
+	padding: unset;
+}
+.address {
+  display: flex;
+}
+select {
+  min-height: unset;
+  padding: 0 18px 0 0 !important;
+  background-position: right 4px center !important;
+  margin: unset;
+}
+.address input {
+	width: 100%;
+}
+
+/* text colors for input box */
+.empty {
+	/*color: black;*/
+	color: var(--in-content-text-color) !important;
+}
+.valid {
+	/*color: black;*/
+	color: var(--in-content-text-color) !important;
+}
+.invalid {
+	/*color: red !important;*/
+	color: var(--in-content-border-invalid) !important;
+}
+
+
+/* select list for possible addresses */
+#results {
+	position: relative;
+	margin-left: 20px;
+}
+
+
+/* progress indicator in selected mails table */
+progress {
+	height: 13px;
+  _n_width: 8em;
+}
+::-moz-progress-bar {
+	animation-duration: 3s;
+	animation-name: slide;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes slide {
+	from {
+		margin-left: 0%;
+		margin-right: 50%;
+	}
+
+	to {
+		margin-left: 50%;
+		margin-right: 0%;
+	}
+}
+.pb {
+	padding: 0px;
+}
+.pb span {
+	position: absolute;
+	color: black;
+	font-size: 80%;
+	padding-top: 2px;
+  margin-left: -66%;
+}
+.pb span.textonly {
+  position: unset;
+  margin-left: 0;
+}
+.pb {
+	display: inline-block;
+	position: relative;
+}
+.hide {
+  display: none;
+}
+.invis {
+  visibility: hidden;
+}
+
+#defName {
+  width: 8em;
+}
+.defName {
+  /* background: url("chrome://global/skin/icons/arrow-down-12.svg") no-repeat right center; */
+  background: url("skin/arrow-down-12.svg") no-repeat right center;
+	background-color: var(--in-content-box-background);
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: var(--in-content-box-background);
+  border: 1px solid silver;
+  padding: 2px;
+}

@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Salli sähköpostiviestien välitys (a.k.a. \"remail\") toisille vastaanottajille."
+    },
+    "selected": {
+        "message": "Seuraavat viestit uudelleenohjataan:"
+    },
+    "subject": {
+        "message": "Aihe"
+    },
+    "from": {
+        "message": "Lähettäjä"
+    },
+    "date": {
+        "message": "Päiväys"
+    },
+    "send": {
+        "message": "Lähetä"
+    },
+    "cancel": {
+        "message": "Peruuta"
+    },
+    "close": {
+        "message": "Sulje"
+    },
+    "resent": {
+        "message": "Uudelleenohjaa"
+    },
+    "to": {
+        "message": "Vastaanottaja"
+    },
+    "sendto": {
+        "message": "Lähetä kohteeseen:"
+    },
+    "save": {
+        "message": "Tallenna tämä viesti"
+    },
+    "recipient": {
+        "message": "Vastaanottaja"
+    },
+    "closeonsuccess": {
+        "message": "Sulje tämä ikkuna."
+    },
+    "delay": {
+        "message": "Delay:"
+    },
+    "done": {
+        "message": "Valmis"
+    },
+    "default": {
+        "message": "Tallenna nimellä"
+    },
+    "restore": {
+        "message": "Palauta"
+    },
+    "list": {
+        "message": "Luettelo"
+    },
+    "defaulttitle": {
+        "message": "Aseta oletukseksi"
+    },
+    "restoretitle": {
+        "message": "Palauta oletusasetukset"
+    },
+    "openab": {
+        "message": "Avaa osoitekirja"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Osoitekirjat"
+    },
+    "allbooks": {
+        "message": "Kaikki osoitekirjat"
+    },
+    "searchin": {
+        "message": "Etsi kohteesta:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

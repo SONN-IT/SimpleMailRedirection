@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Umožní presmerovanie e-mailových správ na iných príjemcov."
+    },
+    "selected": {
+        "message": "Nasledovné správy budú presmerované:"
+    },
+    "subject": {
+        "message": "Predmet"
+    },
+    "from": {
+        "message": "Od"
+    },
+    "date": {
+        "message": "Dátum"
+    },
+    "send": {
+        "message": "Odoslať"
+    },
+    "cancel": {
+        "message": "Zrušiť"
+    },
+    "close": {
+        "message": "Zavrieť okno"
+    },
+    "resent": {
+        "message": "Presmerovať"
+    },
+    "to": {
+        "message": "Komu"
+    },
+    "sendto": {
+        "message": "Odoslať kam:"
+    },
+    "save": {
+        "message": "Uložiť túto správu"
+    },
+    "recipient": {
+        "message": "Adresát"
+    },
+    "closeonsuccess": {
+        "message": "Zavrieť toto okno"
+    },
+    "delay": {
+        "message": "Oneskorenie:"
+    },
+    "done": {
+        "message": "Hotovo"
+    },
+    "default": {
+        "message": "Uložiť ako"
+    },
+    "restore": {
+        "message": "Opraviť"
+    },
+    "list": {
+        "message": "Zoznam"
+    },
+    "defaulttitle": {
+        "message": "Nastaviť ako predvolený"
+    },
+    "restoretitle": {
+        "message": "Obnoviť predvolenú sadu"
+    },
+    "openab": {
+        "message": "Otvoriť adresár"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Adresáre"
+    },
+    "allbooks": {
+        "message": "Všetky adresáre kontaktov"
+    },
+    "searchin": {
+        "message": "Hľadať v adresári:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

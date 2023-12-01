@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Ermöglicht das erneute Senden (auch als Umleiten bezeichnet) von E-Mail Nachrichten."
+    },
+    "selected": {
+        "message": "Folgende Nachrichten werden umgeleitet:"
+    },
+    "subject": {
+        "message": "Betreff"
+    },
+    "from": {
+        "message": "Von"
+    },
+    "date": {
+        "message": "Datum"
+    },
+    "send": {
+        "message": "Senden"
+    },
+    "cancel": {
+        "message": "Abbrechen"
+    },
+    "close": {
+        "message": "Schließen"
+    },
+    "resent": {
+        "message": "Umleiten"
+    },
+    "to": {
+        "message": "An"
+    },
+    "sendto": {
+        "message": "Diesen Eintrag senden an:"
+    },
+    "save": {
+        "message": "Diese Nachricht speichern"
+    },
+    "recipient": {
+        "message": "Empfänger"
+    },
+    "closeonsuccess": {
+        "message": "Dieses Fenster schließen."
+    },
+    "delay": {
+        "message": "Verzögerung:"
+    },
+    "done": {
+        "message": "Fertig"
+    },
+    "default": {
+        "message": "Speichern als"
+    },
+    "restore": {
+        "message": "Wiederherstellen"
+    },
+    "list": {
+        "message": "Liste"
+    },
+    "defaulttitle": {
+        "message": "Als Standard festlegen"
+    },
+    "restoretitle": {
+        "message": "Standard wiederherstellen"
+    },
+    "openab": {
+        "message": "Adressbuch öffnen"
+    },
+    "filter": {
+        "message": "Umleiten An:"
+    },
+    "needvalidaddress": {
+        "message": "Bitte eine gültige E-Mail Adresse angeben"
+    },
+    "books": {
+        "message": "Adressbücher"
+    },
+    "allbooks": {
+        "message": "Alle Adressbücher"
+    },
+    "searchin": {
+        "message": "Suchen in:"
+    },
+    "reloadoptions": {
+        "message": "Bitte die Einstellungen neu öffnen"
+    }
+}

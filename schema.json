@@ -1,0 +1,102 @@
+[
+  {
+    "namespace": "smr",
+    "functions": [
+      {
+        "name": "init",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "options",
+            "type": "any",
+            "description": "options for init"
+          }
+        ]
+      },
+      {
+        "name": "redirect",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "mailheaders",
+            "type": "any",
+            "description": "Array of MessageHeaders to resent"
+          },
+          {
+            "name": "resentTo",
+            "type": "any",
+            "description": "Array of recipients for the messages"
+          },
+          {
+            "name": "params",
+            "type": "any",
+            "description": "object with accountId, identityId, save to sent folder"
+          },
+          {
+            "name": "windowId",
+            "type": "number",
+            "description": "Window id"
+          },
+          {
+            "name": "prefs",
+            "type": "any",
+            "description": "Object of preferences"
+          }
+				]
+      },
+      {
+        "name": "abort",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "windowId",
+            "type": "number",
+            "description": "window id"
+          },
+          {
+            "name": "msgId",
+            "type": "number",
+            "description": "id of message to abort"
+          }
+				]
+      }
+    ],
+    "events": [
+      {
+        "name": "onMailSent",
+        "type": "function",
+        "description": "Fires when a mail has been sent",
+        "parameters": [
+          {
+            "name": "changed",
+            "type": "any",
+            "description": "object with message sent"
+          }
+        ],
+        "extraParameters": [
+          {
+            "name": "windowId",
+            "description": "Id of current window",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "onFilterUseCount",
+        "type": "function",
+        "description": "set filter uses count",
+        "parameters": [
+          {
+            "name": "count",
+            "type": "number",
+            "description": "the new uses count"
+          }
+        ]
+      }
+    ]
+
+  }
+]

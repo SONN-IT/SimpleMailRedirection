@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Omogoči preusmerjanje (znano tudi kot \"odbijanje\") poštnih sporočil k drugim prejemnikom."
+    },
+    "selected": {
+        "message": "Naslednja pošta bo preusmerjena:"
+    },
+    "subject": {
+        "message": "Zadeva"
+    },
+    "from": {
+        "message": "Od"
+    },
+    "date": {
+        "message": "Datum"
+    },
+    "send": {
+        "message": "Pošlji"
+    },
+    "cancel": {
+        "message": "Prekliči"
+    },
+    "close": {
+        "message": "Zapri"
+    },
+    "resent": {
+        "message": "Preusmeri"
+    },
+    "to": {
+        "message": "Za"
+    },
+    "sendto": {
+        "message": "Pošlji predmet v:"
+    },
+    "save": {
+        "message": "Shrani to sporočilo"
+    },
+    "recipient": {
+        "message": "Prejemnik"
+    },
+    "closeonsuccess": {
+        "message": "Zapri to okno."
+    },
+    "delay": {
+        "message": "Zakasnitev:"
+    },
+    "done": {
+        "message": "Končano"
+    },
+    "default": {
+        "message": "Shrani kot"
+    },
+    "restore": {
+        "message": "Obnovi"
+    },
+    "list": {
+        "message": "seznama"
+    },
+    "defaulttitle": {
+        "message": "Privzeti račun"
+    },
+    "restoretitle": {
+        "message": "Obnovi privzeti nabor"
+    },
+    "openab": {
+        "message": "Odpri imenik"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Imenike"
+    },
+    "allbooks": {
+        "message": "Vsi imeniki"
+    },
+    "searchin": {
+        "message": "Išči v:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

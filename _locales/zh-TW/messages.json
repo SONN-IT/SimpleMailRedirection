@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "允許重新導向（又稱為「remail」）郵件訊息給其他收件者。"
+    },
+    "selected": {
+        "message": "下列郵件將會被重新導向："
+    },
+    "subject": {
+        "message": "主旨"
+    },
+    "from": {
+        "message": "從"
+    },
+    "date": {
+        "message": "日期"
+    },
+    "send": {
+        "message": "傳送"
+    },
+    "cancel": {
+        "message": "取消"
+    },
+    "close": {
+        "message": "關閉"
+    },
+    "resent": {
+        "message": "重新導向"
+    },
+    "to": {
+        "message": "到"
+    },
+    "sendto": {
+        "message": "傳送此項目到:"
+    },
+    "save": {
+        "message": "儲存此訊息"
+    },
+    "recipient": {
+        "message": "收件者"
+    },
+    "closeonsuccess": {
+        "message": "關閉此視窗。"
+    },
+    "delay": {
+        "message": "延滯:"
+    },
+    "done": {
+        "message": "完成"
+    },
+    "default": {
+        "message": "另存新檔"
+    },
+    "restore": {
+        "message": "復原"
+    },
+    "list": {
+        "message": "清單"
+    },
+    "defaulttitle": {
+        "message": "設為預設帳號"
+    },
+    "restoretitle": {
+        "message": "回復預設設定"
+    },
+    "openab": {
+        "message": "開啟通訊錄"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "通訊錄"
+    },
+    "allbooks": {
+        "message": "所有通訊錄"
+    },
+    "searchin": {
+        "message": "尋找:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

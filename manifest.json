@@ -1,0 +1,69 @@
+{
+  "manifest_version": 2,
+  "name": "Simple Mail Redirection",
+  "short_name": "SMR",
+  "description": "__MSG_extensionDescription__",
+  "version": "1.40",
+  "author": "Günter Gersdorf",
+  "applications": {
+    "gecko": {
+      "id": "simplemailredirection@ggbs.de",
+      "update_url": "https://www.ggbs.de/extensions/SimpleMailRedirection.json",
+      "strict_min_version": "78.7.0",
+      "strict_max_version": "*"
+    }
+  },
+  // also see https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/basics.html
+  "experiment_apis": {
+    "smr": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [ "addon_parent" ],
+        "paths": [ [ "smr" ] ],
+        "script": "smr_implementation.js",
+        "events": ["startup"]
+      }
+    }
+  },
+  "icons": {
+    "48": "skin/SimpleMailRedirection.svg"
+  },
+  "background": {
+    "scripts": ["smr_background.js"]
+  },
+  "permissions": [
+    "storage",
+		"addressBooks",
+    "messagesRead",
+    "menus",
+		"accountsRead",
+		"activeTab",
+		"management"
+  ],
+	"default_locale": "en-US",
+	"message_display_action": {
+		"browser_style": true,
+		"default_icon": "skin/SimpleMailRedirection.svg",
+		"default_title": "Redirect"
+	},
+	"commands": {
+		"smr-redirect-command": {
+			"suggested_key": {
+				"default": "Ctrl+B"
+			},
+			"description": "Redirect selected mails"
+		}
+	},
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+			"48": "skin/SimpleMailRedirection.svg"
+    },
+    "default_title": "__MSG_resent__"
+  },
+  "options_ui": {
+    "page": "smr_options.html",
+    "browser_style": true,
+    "open_in_tab": true
+  }
+}

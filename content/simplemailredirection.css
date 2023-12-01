@@ -1,0 +1,16 @@
+treechildren::-moz-tree-image(subjectCol, kw-redirected) {
+  list-style-image: url("resent.svg") !important;
+  fill: #9c0000 !important; /* doesn't work, fill is in svg */
+}
+
+treechildren::-moz-tree-image(subjectCol, forwarded, kw-redirected) {
+  list-style-image: url("forward-resent.svg") !important;
+}
+
+treechildren::-moz-tree-image(subjectCol, replied, kw-redirected) {
+  list-style-image: url("reply-resent.svg") !important;
+}
+
+treechildren::-moz-tree-image(subjectCol, replied, forwarded, kw-redirected) {
+  list-style-image: url("reply-forward-resent.svg") !important;
+}

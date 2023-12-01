@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Дозволити перенаправляти (пересилати) повідомлення іншим адресатам."
+    },
+    "selected": {
+        "message": "Наступна пошта буде перенаправлена:"
+    },
+    "subject": {
+        "message": "Тема"
+    },
+    "from": {
+        "message": "Від"
+    },
+    "date": {
+        "message": "Дата"
+    },
+    "send": {
+        "message": "Надіслати"
+    },
+    "cancel": {
+        "message": "Скасувати"
+    },
+    "close": {
+        "message": "Закрити"
+    },
+    "resent": {
+        "message": "Перенаправити"
+    },
+    "to": {
+        "message": "Кому"
+    },
+    "sendto": {
+        "message": "Переслати у:"
+    },
+    "save": {
+        "message": "Зберегти це повідомлення"
+    },
+    "recipient": {
+        "message": "Одержувачі"
+    },
+    "closeonsuccess": {
+        "message": "Закрити це вікно."
+    },
+    "delay": {
+        "message": "Затримка:"
+    },
+    "done": {
+        "message": "Готово"
+    },
+    "default": {
+        "message": "Зберегти як"
+    },
+    "restore": {
+        "message": "Відновити"
+    },
+    "list": {
+        "message": "Список"
+    },
+    "defaulttitle": {
+        "message": "Встановити типовим"
+    },
+    "restoretitle": {
+        "message": "Відновити типові"
+    },
+    "openab": {
+        "message": "Відкрити адресну книгу"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Адресні книжки"
+    },
+    "allbooks": {
+        "message": "Всі адресні книги"
+    },
+    "searchin": {
+        "message": "Шукати в:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

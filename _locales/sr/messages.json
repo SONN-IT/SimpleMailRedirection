@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Омогућава преусмеравање имејлова другим примаоцима."
+    },
+    "selected": {
+        "message": "Следећи имејлови ће се преусмерити:"
+    },
+    "subject": {
+        "message": "Наслов"
+    },
+    "from": {
+        "message": "Шаље"
+    },
+    "date": {
+        "message": "Датум"
+    },
+    "send": {
+        "message": "Пошаљи"
+    },
+    "cancel": {
+        "message": "Откажи"
+    },
+    "close": {
+        "message": "Затвори"
+    },
+    "resent": {
+        "message": "Преусмери"
+    },
+    "to": {
+        "message": "За"
+    },
+    "sendto": {
+        "message": "Проследи ову ставку:"
+    },
+    "save": {
+        "message": "Сачувај ову поруку"
+    },
+    "recipient": {
+        "message": "Прималац"
+    },
+    "closeonsuccess": {
+        "message": "Затвори овај прозор."
+    },
+    "delay": {
+        "message": "Delay:"
+    },
+    "done": {
+        "message": "Урађено"
+    },
+    "default": {
+        "message": "Сачувај као"
+    },
+    "restore": {
+        "message": "Опорави"
+    },
+    "list": {
+        "message": "Списак"
+    },
+    "defaulttitle": {
+        "message": "Постави као подразумевано"
+    },
+    "restoretitle": {
+        "message": "Врати подразумевани комплет"
+    },
+    "openab": {
+        "message": "Отвори именик"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Именици"
+    },
+    "allbooks": {
+        "message": "Сви именици"
+    },
+    "searchin": {
+        "message": "Тражи у:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Giver mulighed for at omdirigere (også kendt som \"remail\") meddelelser til andre modtagere."
+    },
+    "selected": {
+        "message": "Følgende meddelelser vil blive omdirigeret:"
+    },
+    "subject": {
+        "message": "Emne"
+    },
+    "from": {
+        "message": "Fra"
+    },
+    "date": {
+        "message": "Dato"
+    },
+    "send": {
+        "message": "Send"
+    },
+    "cancel": {
+        "message": "Annuller"
+    },
+    "close": {
+        "message": "Luk"
+    },
+    "resent": {
+        "message": "Omdiriger"
+    },
+    "to": {
+        "message": "Til"
+    },
+    "sendto": {
+        "message": "Åbn med:"
+    },
+    "save": {
+        "message": "Gem denne meddelelse"
+    },
+    "recipient": {
+        "message": "Til"
+    },
+    "closeonsuccess": {
+        "message": "Luk dette vindue."
+    },
+    "delay": {
+        "message": "Forsinkelse:"
+    },
+    "done": {
+        "message": "Opret konto"
+    },
+    "default": {
+        "message": "Gem som"
+    },
+    "restore": {
+        "message": "Gentag"
+    },
+    "list": {
+        "message": "Liste"
+    },
+    "defaulttitle": {
+        "message": "Vælg som standard"
+    },
+    "restoretitle": {
+        "message": "Gendan standardsæt"
+    },
+    "openab": {
+        "message": "Åbn adressebog"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Adressebøger"
+    },
+    "allbooks": {
+        "message": "Alle adressebøger"
+    },
+    "searchin": {
+        "message": "Søg i:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

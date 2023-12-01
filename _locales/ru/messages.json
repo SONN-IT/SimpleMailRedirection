@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Позволяет перенаправлять (\"перепослать\") сообщения другим адресатам."
+    },
+    "selected": {
+        "message": "Следующие сообщения будут перенаправлены:"
+    },
+    "subject": {
+        "message": "Тема"
+    },
+    "from": {
+        "message": "От"
+    },
+    "date": {
+        "message": "Дата"
+    },
+    "send": {
+        "message": "Отправить"
+    },
+    "cancel": {
+        "message": "Отмена"
+    },
+    "close": {
+        "message": "Закрыть"
+    },
+    "resent": {
+        "message": "Перенаправить"
+    },
+    "to": {
+        "message": "Кому"
+    },
+    "sendto": {
+        "message": "Отправить этот файл в:"
+    },
+    "save": {
+        "message": "Сохранить это сообщение"
+    },
+    "recipient": {
+        "message": "Адресат"
+    },
+    "closeonsuccess": {
+        "message": "Закрыть это окно."
+    },
+    "delay": {
+        "message": "Задержка:"
+    },
+    "done": {
+        "message": "Готово"
+    },
+    "default": {
+        "message": "Сохранить как"
+    },
+    "restore": {
+        "message": "Восстановить"
+    },
+    "list": {
+        "message": "Список"
+    },
+    "defaulttitle": {
+        "message": "Установить по умолчанию"
+    },
+    "restoretitle": {
+        "message": "Восстановить по умолчанию"
+    },
+    "openab": {
+        "message": "Открыть адресную книгу"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Адресные книги"
+    },
+    "allbooks": {
+        "message": "Все адресные книги"
+    },
+    "searchin": {
+        "message": "Место поиска:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

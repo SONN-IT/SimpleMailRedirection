@@ -1,0 +1,98 @@
+Filter startup:
+@smr_filter.js:4 Filter: filter.js loaded
+@smr_filter.js:5 Filter:   de_ggbs_SimpleMailRedirect_Filter=undefined
+onStartup@smr_filter.js:103 Filter: redirectFilterWrapper onStartup
+addFilterIfNotExists@smr_filter.js:198 Filter: addFilterIfNotExists
+addFilterIfNotExists@smr_filter.js:206 Filter: getCustomAction throws [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIMsgFilterService.getCustomAction]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: file:///D:/sourcen/Mozilla/thunderbird/Extensions/SimpleMailRedirection/smr_filter.js :: addFilterIfNotExists :: line 200"  data: no] ==> add filter
+addCustomFilter@smr_filter.js:118 Filter: addCustomFilter de_ggbs_SimpleMailRedirect_Filter=[object Object]
+onStartup@smr_filter.js:92 Filter: redirectFilter onStartup
+n@smr_filter.js:112 Filter: redirectFilterWrapper onShutdown
+n@smr_filter.js:96 Filter: redirectFilter onShutdown
+@smr_filter.js:4 Filter: filter.js loaded
+@smr_filter.js:5 Filter:   de_ggbs_SimpleMailRedirect_Filter=null
+onStartup@smr_filter.js:103 Filter: redirectFilterWrapper onStartup
+addFilterIfNotExists@smr_filter.js:199 Filter: addFilterIfNotExists
+addFilterIfNotExists@smr_filter.js:203 Filter: getCustomAction returned filter, do nothing.
+onStartup@smr_filter.js:92 Filter: redirectFilter onStartup
+
+Nix bei FilterListDialog.xhtml
+
+FilterEditor.js opened
+onOpenWindow/<@smr_filter.js:180 Filter: FilterEditor opened, patchRuleaction
+patchRuleactiontargetWrapper@smr_filter.js:145 Filter: patchRuleactiontargetWrapper called
+patchRuleactiontargetWrapper@smr_filter.js:152 Filter:    alreadyPatched=false
+isValidForType@smr_filter.js:123 Filter: main: isValidForType: de_ggbs_SimpleMailRedirect_Filter=[object Object]
+isValidForType@smr_filter.js:49 Filter: isValidForType: type=16 scope=3
+patchRuleactiontargetWrapper/wrapper.prototype._getChildNode@smr_filter.js:158 Filter: _getChildNode called, type=simpleMailRedirection@ggbs.de#redirect
+
+Save rule:
+validateActionValue@smr_filter.js:56 Filter: validateActionValue: actionValue=G.Gersdorf@davbs.de actionFolder=imap://ggbs@mail.ggbs.de filterType=16
+
+Filter ausführen:
+applyAction@smr_filter.js:69 Filter: applyAction called
+applyAction@smr_filter.js:70 Filter:    msgHdrs=[xpconnect wrapped nsIMsgDBHdr] count=1
+applyAction@smr_filter.js:71 Filter:    actionValue=G.Gersdorf@davbs.de
+applyAction@smr_filter.js:72 Filter:    copyListener=[xpconnect wrapped nsIMsgCopyServiceListener]
+applyAction@smr_filter.js:73 Filter:    filterType=16
+applyAction@smr_filter.js:74 Filter:    msgWindow=[xpconnect wrapped nsIMsgWindow]
+applyAction@smr_filter.js:76 Filter: msghdr=[xpconnect wrapped nsIMsgDBHdr] 65138
+applyAction@smr_filter.js:80 Filter: accountId=account1
+applyAction@smr_filter.js:82 Filter: identity=[nsIMsgIdentity: id1]
+prepareMessage@smr_implementation.js:193 got msgHdr id=65138
+prepareMessage@smr_implementation.js:202 converting: called from filter
+prepareMessage@smr_implementation.js:255 call resent URI=imap-message://ggbs@mail.ggbs.de/INBOX#65138 sender=Günter Gersdorf <G.Gersdorf@ggbs.de>
+resentMessage@smr_implementation.js:459 resentMessage imap-message://ggbs@mail.ggbs.de/INBOX#65138
+resentMessage@smr_implementation.js:463 use FileUtils.getFile (up to TB115)
+resentMessage@smr_implementation.js:475 writing message to C:\Temp\tb_simplemailredirection-1.tmp
+resentMessage@smr_implementation.js:480 workaround changeFrom for account1|id1 is false
+onDataAvailable@smr_implementation.js:590 onDataAvailable
+onDataAvailable@smr_implementation.js:610 Lineending CR/LF (Windows)
+getResentHeaders@smr_implementation.js:793 custom header "X-gg: dummy"
+getResentHeaders@smr_implementation.js:802 custom headers inject "X-Gg: dummy"
+getResentDate@smr_implementation.js:906 resentDate: Mon, 23 Oct 2023 16:32:34 +0200
+onDataAvailable@smr_implementation.js:614 resent with account=account1 identity=Günter Gersdorf <G.Gersdorf@ggbs.de> => sender==?UTF-8?Q?G=C3=BCnter_Gersdorf?= <G.Gersdorf@ggbs.de>
+onDataAvailable@smr_implementation.js:720 removed line: Return-Path: <SRS0=qj4m=GC=quick.de=bestellung@ggbS.de>
+onStopRequest@smr_implementation.js:530 file copied to tempfile C:\Temp\tb_simplemailredirection-1.tmp
+onStopRequest@smr_implementation.js:554 account=account1 identity=Günter Gersdorf <G.Gersdorf@ggbs.de> => sender==?UTF-8?Q?G=C3=BCnter_Gersdorf?= <G.Gersdorf@ggbs.de>
+onStopRequest@smr_implementation.js:569 compFields: {"to":"G.Gersdorf@davbs.de","from":"=?UTF-8?Q?G=C3=BCnter_Gersdorf?= <G.Gersdorf@ggbs.de>","fcc":"nocopy://","fcc2":"","messageId":"<0a94fb3c-5a08-4a41-85b5-05505f2e7a13@ggbs.de>","cc":"","headerNames":{},"replyTo":"","bcc":"","hasRecipients":true,"newsgroups":"","newspostUrl":"","followupTo":"","subject":"","organization":"","references":"","priority":"","templateName":"","draftId":"","templateId":"","returnReceipt":false,"receiptHeaderType":0,"DSN":false,"attachVCard":false,"forcePlainText":false,"useMultipartAlternative":false,"bodyIsAsciiOnly":false,"forceMsgEncoding":false,"attachmentReminder":false,"deliveryFormat":4,"contentLanguage":"","creatorIdentityKey":"","body":"","attachments":[],"otherHeaders":[],"needToCheckCharset":true,"composeSecure":null}
+onStopSending@smr_implementation.js:325 nsMsgSendListener.onStopSending <0a94fb3c-5a08-4a41-85b5-05505f2e7a13@ggbs.de>, 0, null, null imap-message://ggbs@mail.ggbs.de/INBOX#65138
+onStopSending@smr_implementation.js:326 nsMsgSendListener.onStopSending windowId=null undefined
+onStopSending@smr_implementation.js:383 keywords now set to: nonjunk redirected
+onStopSending@smr_implementation.js:395 added redirected flag
+OnStopCopy failed with 0x80570030
+_doFcc2/<@resource:///modules/MessageSend.jsm:1047:30
+notify@resource://gre/modules/Timer.sys.mjs:49:17
+MessageSend.jsm:1052:17
+
+------------------
+
+SMR disablen:
+close@smr_implementation.js:193 close
+onShutdown@smr_filter.js:128 Filter: redirectFilterWrapper onShutdown
+onShutdown@smr_filter.js:106 Filter: redirectFilter onShutdown
+stylesheets@smr_implementation.js:933 stylesheet uri=moz-extension://fcc0027b-49cb-4861-8f63-3a7ad61f612d/skin/simplemailredirection.css
+stylesheets@smr_implementation.js:939 stylesheet unloaded
+getAPI/register/<.smr.onFilterUseCount@smr_implementation.js:182 onFilterUseCount unregister
+onShutdown@smr_implementation.js:38 onShutdown isAppShutdown=false
+Error: sendRemoveListener on closed conduit simplemailredirection@ggbs.de.137438953485 ConduitsChild.sys.mjs:108:13
+  (der Event?)
+
+FilterEditor.js opened
+isValidForType@smr_filter.js:139 Filter: main: isValidForType: de_ggbs_SimpleMailRedirect_Filter=null
+  Auswahlbox enthält noch 'Redirect To:' aber kein input Feld für Adresse
+
+Filter save:
+  keine Meldung, kein Error
+
+Filter ausführen:
+  keine Meldung, kein Error
+
+SMR enable:
+geht
+
+Filter edit:
+  Adress Input Feld wieder da, aber leer
+  (Anderer Filter war aber ok!?)
+
+Filter ausführen:
+  Fehler wg. fehlendem To:

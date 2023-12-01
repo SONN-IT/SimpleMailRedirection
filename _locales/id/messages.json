@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Memungkinkan untuk mengarahkan (a.k.a \"remail\") mail ke penerima lain."
+    },
+    "selected": {
+        "message": "Mengikuti mail akan diarahkan:"
+    },
+    "subject": {
+        "message": "Subjek"
+    },
+    "from": {
+        "message": "Dari"
+    },
+    "date": {
+        "message": "Tanggal"
+    },
+    "send": {
+        "message": "Kirim"
+    },
+    "cancel": {
+        "message": "Batal"
+    },
+    "close": {
+        "message": "Tutup"
+    },
+    "resent": {
+        "message": "Redirect"
+    },
+    "to": {
+        "message": "Kepada"
+    },
+    "sendto": {
+        "message": "Kirim item ini ke:"
+    },
+    "save": {
+        "message": "Simpan pesan ini"
+    },
+    "recipient": {
+        "message": "Penerima"
+    },
+    "closeonsuccess": {
+        "message": "Tutup jendela ini sekarang."
+    },
+    "delay": {
+        "message": "Jeda:"
+    },
+    "done": {
+        "message": "Selesai"
+    },
+    "default": {
+        "message": "Simpan sebagai"
+    },
+    "restore": {
+        "message": "Kembalikan"
+    },
+    "list": {
+        "message": "Daftar"
+    },
+    "defaulttitle": {
+        "message": "Atur sebagai Default"
+    },
+    "restoretitle": {
+        "message": "Pulihkan Pengelompokan Tetap"
+    },
+    "openab": {
+        "message": "Buka Buku Alamat"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Buku Alamat"
+    },
+    "allbooks": {
+        "message": "Semua Buku Alamat"
+    },
+    "searchin": {
+        "message": "Cari di:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

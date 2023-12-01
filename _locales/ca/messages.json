@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Permetre redirigir o \"rebotar\" missatges de correu a d'altres destinataris."
+    },
+    "selected": {
+        "message": "Es redireccionaran els següents correus:"
+    },
+    "subject": {
+        "message": "Assumpte"
+    },
+    "from": {
+        "message": "Remitent"
+    },
+    "date": {
+        "message": "Data"
+    },
+    "send": {
+        "message": "Envia"
+    },
+    "cancel": {
+        "message": "Cancel·la"
+    },
+    "close": {
+        "message": "Tanca"
+    },
+    "resent": {
+        "message": "Redirigir"
+    },
+    "to": {
+        "message": "A"
+    },
+    "sendto": {
+        "message": "Envia aquest element a:"
+    },
+    "save": {
+        "message": "Desa aquest missatge"
+    },
+    "recipient": {
+        "message": "Destinatari"
+    },
+    "closeonsuccess": {
+        "message": "Tanca aquesta finestra."
+    },
+    "delay": {
+        "message": "Retard:"
+    },
+    "done": {
+        "message": "Fet"
+    },
+    "default": {
+        "message": "Anomena i desa"
+    },
+    "restore": {
+        "message": "Refés"
+    },
+    "list": {
+        "message": "Llista"
+    },
+    "defaulttitle": {
+        "message": "Defineix per defecte"
+    },
+    "restoretitle": {
+        "message": "Configuració per defecte"
+    },
+    "openab": {
+        "message": "Obre la llibreta d'adreces"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Llibretes d'adreces"
+    },
+    "allbooks": {
+        "message": "Totes les llibretes d'adreces"
+    },
+    "searchin": {
+        "message": "Cerca a:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

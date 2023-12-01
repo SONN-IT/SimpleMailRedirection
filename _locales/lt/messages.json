@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Suteikia galimybę nukreipti (persiųsti) gautus laiškus kitiems adresatams, nekeičiant antraštės „Kam“."
+    },
+    "selected": {
+        "message": "Bus nukreipti šie elektroniniai laiškai:"
+    },
+    "subject": {
+        "message": "Tema"
+    },
+    "from": {
+        "message": "Siuntėjas"
+    },
+    "date": {
+        "message": "Data ir laikas"
+    },
+    "send": {
+        "message": "Išsiųsti"
+    },
+    "cancel": {
+        "message": "Atsisakyti"
+    },
+    "close": {
+        "message": "Užverti"
+    },
+    "resent": {
+        "message": "Nukreipti"
+    },
+    "to": {
+        "message": "Gavėjas"
+    },
+    "sendto": {
+        "message": "Atverti failą šia programa:"
+    },
+    "save": {
+        "message": "Įrašyti šį laišką"
+    },
+    "recipient": {
+        "message": "Gavėjas"
+    },
+    "closeonsuccess": {
+        "message": "Užverti šį langą."
+    },
+    "delay": {
+        "message": "Delsa:"
+    },
+    "done": {
+        "message": "Baigta"
+    },
+    "default": {
+        "message": "Įrašyti kaip"
+    },
+    "restore": {
+        "message": "Atstatyti"
+    },
+    "list": {
+        "message": "Sąrašo"
+    },
+    "defaulttitle": {
+        "message": "Laikyti pirmąja"
+    },
+    "restoretitle": {
+        "message": "Numatytoji struktūra"
+    },
+    "openab": {
+        "message": "Atverti adresų knygą"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "adresų knygas"
+    },
+    "allbooks": {
+        "message": "Visos adresų knygos"
+    },
+    "searchin": {
+        "message": "Kur ieškoti:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

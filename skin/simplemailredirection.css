@@ -1,0 +1,56 @@
+/* up to TB110 */
+treechildren::-moz-tree-image(subjectCol, kw-redirected) {
+  list-style-image: url("resent.svg") !important;
+  fill: #9c0000 !important; /* doesn't work, fill is in svg */
+}
+
+treechildren::-moz-tree-image(subjectCol, forwarded, kw-redirected) {
+  list-style-image: url("forward-resent.svg") !important;
+}
+
+treechildren::-moz-tree-image(subjectCol, replied, kw-redirected) {
+  list-style-image: url("reply-resent.svg") !important;
+}
+
+treechildren::-moz-tree-image(subjectCol, replied, forwarded, kw-redirected) {
+  list-style-image: url("reply-forward-resent.svg") !important;
+}
+
+/* since TB111, needs 'Tredirected' in 'data-properties' of the 'tr' */
+/* setting a tag (Schlagwort) 'redirected' adds 'Tredirected' to the data-properties */
+/* (also 'redirected' is set to the data-properties which is used by TB's version of redirect
+    but this vanishes if message is moved to another folder) */
+/* original:
+  chrome\classic\skin\classic\messenger\icons\redirect.svg, reply-redirect.svg, forward-redirect.svg, reply-forward-redirect.svg
+  var(--icon-forward-redirect-col); =>
+  url("chrome://messenger/skin/icons/new/compact/forward-redirect-col.svg");
+--icon-redirect-col: url("chrome://messenger/skin/icons/new/compact/redirect-col.svg");
+  see threadPane.css#450
+*/
+
+/* the .Tredirected is for the cardvs iew, but does not work */
+tr[data-properties~="Tredirected"] :is(.subject-line img, .Tredirected) {
+  visibility: initial !important;
+  display: initial !important;
+/*  content: url("resent.svg") !important;*/
+  content: var(--icon-redirect-col) !important;
+  fill: var(--color-purple-50); /* doesn't work, fill is in svg */
+}
+tr[data-properties~="Tredirected"][data-properties~="forwarded"] .subject-line img {
+  visibility: initial !important;
+  display: initial !important;
+/*  content: url("forward-resent.svg" !important);*/
+  content: var(--icon-forward-redirect-col) !important;
+}
+tr[data-properties~="Tredirected"][data-properties~="replied"] .subject-line img {
+  visibility: initial !important;
+  display: initial !important;
+/*  content: url("reply-resent.svg") !important;*/
+  content: var(--icon-reply-redirect-col) !important;
+}
+tr[data-properties~="Tredirected"][data-properties~="forwarded"][data-properties~="replied"] .subject-line img {
+  visibility: initial !important;
+  display: initial !important;
+/*  content: url("reply-forward-resent.svg") !important;*/
+  content: var(--icon-reply-forward-redirect-col) !important;
+}

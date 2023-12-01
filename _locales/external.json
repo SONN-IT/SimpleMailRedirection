@@ -1,0 +1,164 @@
+{
+  "extensionName": {
+    "default": "Simple Mail Redirection"
+  },
+  "selected": {
+      "default": "Selected mails",
+      "_file": "multimessageview.dtd",
+      "_key": "selectedmessages.label",
+      "file": "D:/installed/Netz/Mozilla/ThunderbirdExtensions/mailredirect-0.10.9-sm+tb/chrome/locale/%lang%/mailredirect-compose.dtd",
+      "key": "bounceMailsLabel.label",
+      "de": "Ausgewählte Mails"
+  },
+  "resent": {
+      "default": "Redirect to",
+      "file": "D:/installed/Netz/Mozilla/ThunderbirdExtensions/mailredirect-0.10.9-sm+tb/chrome/locale/%lang%/mailredirect.dtd",
+      "key": "bounceCommand.label",
+      "_de": "Umleiten"
+  },
+  "sendto": {
+      "default": "Send to",
+      "file": "../global/appPicker.dtd",
+      "key": "SendMsg.label",
+      "_de": "Senden an"
+  },
+  "recipient": {
+      "default": "Send to:",
+      "file": "messenger.dtd",
+      "key": "recipientColumn.label",
+      "_de": "Senden an:"
+  },
+  "subject": {
+      "default": "Subject",
+      "file": "messenger.dtd",
+      "key": "subjectColumn.label",
+      "_de": "Betreff"
+  },
+  "from": {
+      "default": "From",
+      "file": "messenger.dtd",
+      "key": "fromColumn.label",
+      "_de": "Von"
+  },
+  "to": {
+      "default": "To",
+      "file": "messengercompose/messengercompose.dtd",
+      "key": "toAddr2.label",
+      "_de": "An"
+  },
+  "save": {
+      "default": "Save this message",
+      "file": "messengercompose/messengercompose.dtd",
+      "key": "saveButton.tooltip",
+      "_de": "Diese Nachricht speichern"
+  },
+  "date": {
+      "default": "Date",
+      "file": "messenger.dtd",
+      "key": "dateColumn.label",
+      "_de": "Datum"
+  },
+  "send": {
+      "default": "Send",
+      "file": "messengercompose/messengercompose.dtd",
+      "key": "sendButton.label",
+      "_de": "Senden"
+  },
+  "cancel": {
+      "default": "Cancel",
+      "file": "accountCreation.dtd",
+      "key": "cancel.label",
+      "_de": "Abbrechen"
+  },
+  "close": {
+      "default": "Close",
+      "file": "messengercompose/messengercompose.dtd",
+      "key": "closeCmd.label",
+      "_de": "Schließen"
+  },
+  "closeonsuccess": {
+      "default": "Close dialog on success",
+      "file": "newmailaccount/accountProvisioner.dtd",
+      "key": "successful.close",
+      "_de": "Fenster bei Erfolg schließen"
+  },
+  "delay": {
+      "default": "Delay:",
+      "file": "../devtools/client/animationinspector.properties",
+      "key": "player.animationDelayLabel",
+      "_de": "Verzögerung:"
+  },
+  "done": {
+      "default": "Done",
+      "file": "accountCreation.dtd",
+      "key": "doneAccount.label",
+      "_de": "Erledigt"
+  },
+  "default": {
+      "default": "Save as",
+      "file": "messengercompose/messengercompose.dtd",
+      "key": "saveAsCmd.label",
+      "_de": "Speichern als"
+  },
+  "defaulttitle": {
+      "default": "Set as Default",
+      "file": "AccountManager.dtd",
+      "key": "setDefaultButton.label",
+      "_de": "Als Standard setzen"
+  },
+  "restore": {
+      "default": "Recover",
+      "file": "activity.dtd",
+      "key": "cmd.recover.label",
+      "_de": "Standard wiederherstellen"
+  },
+  "restoretitle": {
+      "default": "Restore Default Set",
+      "file": "customizeToolbar.dtd",
+      "key": "restoreDefaultSet.label",
+      "_de": "Standard wiederherstellen"
+  },
+  "list": {
+      "default": "List",
+      "file": "messengercompose/editor.properties",
+      "key": "List",
+      "_de": "Liste"
+  },
+  "openab": {
+      "default": "Open Address Book",
+      "file": "messenger.dtd",
+      "key": "openAddressBookDock.label",
+      "_de": "Adressbuch öffnen"
+  },
+  "filter": {
+      "default": "Redirect To:",
+      "de": "Umleiten An:"
+   },
+  "needvalidaddress": {
+      "default": "Please enter a valid e-mail address",
+      "de": "Bitte eine gültige E-Mail Adresse angeben"
+  },
+  "books": {
+      "default": "Address books",
+      "file": "messenger/importDialog.dtd",
+      "key": "importAddressbook.label",
+      "_de": "Adressbücher"
+  },
+  "allbooks": {
+      "default": "All Address books",
+      "file": "addressbook/addressBook.properties",
+      "key": "allAddressBooks",
+      "_de": "Alle Adressbücher"
+  },
+  "searchin": {
+      "default": "Search in:",
+      "file": "SearchDialog.dtd",
+      "key": "abSearchHeading.label",
+      "_de": "Suche in:"
+  },
+  "reloadoptions": {
+      "default": "Please reopen the options dialog",
+      "de": "Bitte die Einstellungen neu öffnen"
+  }
+
+}

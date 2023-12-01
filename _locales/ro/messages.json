@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Permite retrimiterea (remail=aruncare) mesajelor către alți destinatari."
+    },
+    "selected": {
+        "message": "Următoarele mesaje vor fi retrimise:"
+    },
+    "subject": {
+        "message": "Subiect"
+    },
+    "from": {
+        "message": "Expeditor"
+    },
+    "date": {
+        "message": "Dată"
+    },
+    "send": {
+        "message": "Trimite"
+    },
+    "cancel": {
+        "message": "Renunță"
+    },
+    "close": {
+        "message": "Închide"
+    },
+    "resent": {
+        "message": "Retrimite"
+    },
+    "to": {
+        "message": "Către"
+    },
+    "sendto": {
+        "message": "Trimite către:"
+    },
+    "save": {
+        "message": "Salvează acest mesaj"
+    },
+    "recipient": {
+        "message": "Destinatar"
+    },
+    "closeonsuccess": {
+        "message": "Închide fereastra."
+    },
+    "delay": {
+        "message": "Întârziere:"
+    },
+    "done": {
+        "message": "Terminat"
+    },
+    "default": {
+        "message": "Salvează ca"
+    },
+    "restore": {
+        "message": "Recuperează"
+    },
+    "list": {
+        "message": "Listă"
+    },
+    "defaulttitle": {
+        "message": "Setează ca implicit"
+    },
+    "restoretitle": {
+        "message": "Revenire la setările implicite"
+    },
+    "openab": {
+        "message": "Deschide agenda de contacte"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Agende de contacte"
+    },
+    "allbooks": {
+        "message": "Toate agendele de contacte"
+    },
+    "searchin": {
+        "message": "Caută în:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

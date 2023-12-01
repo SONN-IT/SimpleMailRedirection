@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Kan omadressere (aka \"remail\") e-postmeldinger til andre mottakere."
+    },
+    "selected": {
+        "message": "Følgende e-poster vil bli omdirigert:"
+    },
+    "subject": {
+        "message": "Emne"
+    },
+    "from": {
+        "message": "Fra"
+    },
+    "date": {
+        "message": "Dato"
+    },
+    "send": {
+        "message": "Send"
+    },
+    "cancel": {
+        "message": "Avbryt"
+    },
+    "close": {
+        "message": "Lukk"
+    },
+    "resent": {
+        "message": "Omdiriger"
+    },
+    "to": {
+        "message": "Til"
+    },
+    "sendto": {
+        "message": "Send filen til:"
+    },
+    "save": {
+        "message": "Lagre meldingen"
+    },
+    "recipient": {
+        "message": "Mottaker"
+    },
+    "closeonsuccess": {
+        "message": "Lukk dette vinduet."
+    },
+    "delay": {
+        "message": "Delay:"
+    },
+    "done": {
+        "message": "Ferdig"
+    },
+    "default": {
+        "message": "Lagre som"
+    },
+    "restore": {
+        "message": "Gjenopprett"
+    },
+    "list": {
+        "message": "Liste"
+    },
+    "defaulttitle": {
+        "message": "Bruk som standard"
+    },
+    "restoretitle": {
+        "message": "Gjenopprett standardsett"
+    },
+    "openab": {
+        "message": "Åpne adressebok"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Adressebøker"
+    },
+    "allbooks": {
+        "message": "Alle adressebøker"
+    },
+    "searchin": {
+        "message": "Søk i:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

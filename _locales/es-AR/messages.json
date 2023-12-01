@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Permitir redirigir (a.k.a. \"re-mail\") los mensajes de correo a otros destinatarios."
+    },
+    "selected": {
+        "message": "Los correos siguientes se reexpedirán:"
+    },
+    "subject": {
+        "message": "Asunto"
+    },
+    "from": {
+        "message": "De"
+    },
+    "date": {
+        "message": "Fecha"
+    },
+    "send": {
+        "message": "Enviar"
+    },
+    "cancel": {
+        "message": "Cancelar"
+    },
+    "close": {
+        "message": "Cerrar"
+    },
+    "resent": {
+        "message": "Reexpedir"
+    },
+    "to": {
+        "message": "Para"
+    },
+    "sendto": {
+        "message": "Enviar este ítem a:"
+    },
+    "save": {
+        "message": "Guardar este mensaje"
+    },
+    "recipient": {
+        "message": "Destinatario"
+    },
+    "closeonsuccess": {
+        "message": "Cerrar esta ventana."
+    },
+    "delay": {
+        "message": "Retardo:"
+    },
+    "done": {
+        "message": "Finalizado"
+    },
+    "default": {
+        "message": "Guardar como"
+    },
+    "restore": {
+        "message": "Recuperar"
+    },
+    "list": {
+        "message": "Lista"
+    },
+    "defaulttitle": {
+        "message": "Definir como predeterminada"
+    },
+    "restoretitle": {
+        "message": "Restaurar predeterminado"
+    },
+    "openab": {
+        "message": "Abrir libreta de direcciones"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Libretas de direcciones"
+    },
+    "allbooks": {
+        "message": "Todas las libretas de direcciones"
+    },
+    "searchin": {
+        "message": "Buscar en:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

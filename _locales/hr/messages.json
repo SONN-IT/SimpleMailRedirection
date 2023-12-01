@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Dozvoljava preusmjeravanje (ili \"remail\") poruka e-pošte drugim primateljima."
+    },
+    "selected": {
+        "message": "Sljedeće poruke će biti preusmjerene:"
+    },
+    "subject": {
+        "message": "Naslov"
+    },
+    "from": {
+        "message": "Šalje"
+    },
+    "date": {
+        "message": "Datum"
+    },
+    "send": {
+        "message": "Pošalji"
+    },
+    "cancel": {
+        "message": "Otkaži"
+    },
+    "close": {
+        "message": "Zatvori"
+    },
+    "resent": {
+        "message": "Preusmjeri"
+    },
+    "to": {
+        "message": "Prima"
+    },
+    "sendto": {
+        "message": "Pošalji ovu stavku za:"
+    },
+    "save": {
+        "message": "Spremi ovu poruku"
+    },
+    "recipient": {
+        "message": "Primatelj"
+    },
+    "closeonsuccess": {
+        "message": "Zatvori ovaj prozor."
+    },
+    "delay": {
+        "message": "Kašnjenje:"
+    },
+    "done": {
+        "message": "Gotovo"
+    },
+    "default": {
+        "message": "Spremi kao"
+    },
+    "restore": {
+        "message": "Ponovi"
+    },
+    "list": {
+        "message": "Popis"
+    },
+    "defaulttitle": {
+        "message": "Postavi kao zadani"
+    },
+    "restoretitle": {
+        "message": "Vrati zadani set"
+    },
+    "openab": {
+        "message": "Otvori adresar"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Adresari"
+    },
+    "allbooks": {
+        "message": "Svi adresari"
+    },
+    "searchin": {
+        "message": "Traži u:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="/l10n.js"></script>
+    <script src="/smr_addresses.js"></script>
+    <title>__MSG_extensionName__</title>
+		<link rel="stylesheet" href="chrome://global/skin/in-content/common.css">
+		<link rel="stylesheet" href="smr_addresses.css">
+  </head>
+  
+  <body id="body" style="display:none">
+    <div id="from">
+      <label style="padding-top: 7px;">__MSG_from__:</label>
+      <select id="accountsel">
+      </select>
+			<div id="maxConnBox">
+				<input type="number" id="maxConn" min="0"/><label for="macConn">Max. Connections</label>
+			</div>
+			<div id="changefromBox" style="display: none;">
+				<input type="checkbox" id="changefrom"/><label for="changefrom">Change "From:" header</label>
+			</div>
+    </div>
+    <div>
+      <div style="float: right;"><input type="checkbox" id="copy" value="copy"/>
+        <label for="copy">__MSG_save__</label></div>
+      <p style="font-weight: bold">__MSG_selected__</p>
+      <div style="display:flex; margin-top:1ex; overflow: auto; max-height: 30em;">
+      <table id="mails" style="width: max-content; border-collapse: collapse;"><thead>
+        <tr><th></th><th>__MSG_subject__</th><th></th><th>__MSG_from__</th><th>__MSG_date__</th></tr>
+      </thead><tbody></tbody></table>
+      </div>
+    </div>
+
+    <div>
+      <img id="ab" src="chrome://messenger/skin/icons/address.svg" 
+            title="__MSG_openab__" style="float: right;"/>
+
+      <p><span style="font-weight: bold" >__MSG_sendto__</span>
+        <input type="button" id="default" value="__MSG_default__" title="__MSG_defaulttitle__"
+          style="margin-left: 5em;" />
+        <!--label for="defName">__MSG_List__:</label-->
+        <input type="text" id="defName"
+            list="defNames" size="5" class="defName" placeholder="*" autocomplete="off" />
+        <datalist id="defNames">
+        </datalist>
+        <input type="button" id="restore" value="__MSG_restore__" title="__MSG_restoretitle__" />
+        <div id="tooltip" class="tooltip" ></div>
+      </p>
+      <div style="margin-top:1ex; _height: 200px; overflow-y: auto;">
+        <!-- no whitespace between div, select and input AND /div's -->
+        <div id="address" class="address"><select>
+            <option value="TO">__MSG_to__:</option>
+            <option value="CC">Cc:</option>
+            <option value="BCC">Bcc:</option>
+          </select><input id="email" type="text" class="empty" autofocus="true"
+              placeholder="__MSG_recipient__..." autocomplete="off" accesskey="t"/>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin: 1em;">
+			<input type="button" id="addressOK" value="__MSG_send__" disabled="true"/>
+			<input type="button" id="addressCANCEL" value="__MSG_cancel__"/>
+      <span><input type="checkbox" id="closeonsuccess" value="closeonsuccess"/>
+        <label for="closeonsuccess">__MSG_closeonsuccess__</label></span>
+			<span id="debugbox" style="display: none;">
+        <label>__MSG_delay__</label> <input id="delay" type="text" size="1" maxlength="2"/>
+				<input type="checkbox" id="debug"/><label for="debug">Debug</label>
+			</span>
+
+		</div>
+  </body>
+</html>

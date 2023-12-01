@@ -1,0 +1,89 @@
+{
+    "extensionName": {
+        "message": "Simple Mail Redirection"
+    },
+    "extensionDescription": {
+        "message": "Предоставя възможност за преадресиране на електронни писма до други получатели."
+    },
+    "selected": {
+        "message": "Следните писма ще бъдат преадресирани:"
+    },
+    "subject": {
+        "message": "Тема"
+    },
+    "from": {
+        "message": "Подател"
+    },
+    "date": {
+        "message": "Дата"
+    },
+    "send": {
+        "message": "Изпращане"
+    },
+    "cancel": {
+        "message": "Отказ"
+    },
+    "close": {
+        "message": "Затваряне"
+    },
+    "resent": {
+        "message": "Преадресиране"
+    },
+    "to": {
+        "message": "To"
+    },
+    "sendto": {
+        "message": "Изпращане на този елемент към:"
+    },
+    "save": {
+        "message": "Запазване на писмото"
+    },
+    "recipient": {
+        "message": "Получател"
+    },
+    "closeonsuccess": {
+        "message": "Затваряне на прозореца."
+    },
+    "delay": {
+        "message": "Забавяне:"
+    },
+    "done": {
+        "message": "Готово"
+    },
+    "default": {
+        "message": "Запазване като"
+    },
+    "restore": {
+        "message": "Възстановяване"
+    },
+    "list": {
+        "message": "Списък"
+    },
+    "defaulttitle": {
+        "message": "По подразбиране"
+    },
+    "restoretitle": {
+        "message": "Стандартни настройки"
+    },
+    "openab": {
+        "message": "Отваряне на адресник"
+    },
+    "filter": {
+        "message": "Redirect To:"
+    },
+    "needvalidaddress": {
+        "message": "Please enter a valid e-mail address"
+    },
+    "books": {
+        "message": "Адресници"
+    },
+    "allbooks": {
+        "message": "Всички адресници"
+    },
+    "searchin": {
+        "message": "Търсене в:"
+    },
+    "reloadoptions": {
+        "message": "Please reopen the options dialog"
+    }
+}
