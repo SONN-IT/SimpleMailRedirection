@@ -339,7 +339,7 @@ debug('we already have a listener');
 	document.getElementById("ab").addEventListener('click', openAB);
 	document.getElementById("body").addEventListener('keydown', bodykey);
 	document.getElementById("accountsel").addEventListener('change', accountchange);
-	document.getElementById("maxConn").addEventListener('change', changemaxconn);
+	// document.getElementById("maxConn").addEventListener('change', changemaxconn);
 	document.getElementById("changefrom").addEventListener('change', togglechangefrom);
 	document.getElementById("closeonsuccess").addEventListener('change', togglecloseonsuccess);
 	document.getElementById("delay").addEventListener('change', changedelay);
@@ -458,9 +458,9 @@ debug('using '+defAcctId+' '+defIdenId);
         o.value=account.id+'|'+identity.id;
         if (account.id==defAcctId && identity.id==defIdenId) {
           o.selected=true;
-					let mc=document.getElementById('maxConn');
-          mc.value=prefs.maxConn[o.value]??4; //TODO: should be indexed by smtp-server, not by account|identity
-          mc.name=o.value;
+					// let mc=document.getElementById('maxConn');
+          // mc.value=prefs.maxConn[o.value]??4; //TODO: should be indexed by smtp-server, not by account|identity
+          // mc.name=o.value;
 					let cf=document.getElementById('changefrom');
 					let cfb=document.getElementById('changefromBox');
 					cf.name=o.value;
@@ -601,8 +601,8 @@ debug('lists: '+mLists.size+' '+JSON.stringify(Array.from(mLists.entries())));
 function accountchange(ev) {
   let acct=ev.target.value;
 debug('account now '+acct);
-  let mc=document.getElementById('maxConn');
-  mc.value=prefs.maxConn[acct]??4; //TODO: should be indexed by smtp-server, not by account|identity
+  // let mc=document.getElementById('maxConn');
+  // mc.value=prefs.maxConn[acct]??4; //TODO: should be indexed by smtp-server, not by account|identity
   let cf=document.getElementById('changefrom');
   let cfb=document.getElementById('changefromBox');
   cf.name=acct;

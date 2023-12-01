@@ -119,7 +119,7 @@ debug('resent='+JSON.stringify(resent));
           windows[windowId].resent=resent;
           let accountId=windows[windowId].accountId=params.accountId; //mh.folder.accountId;
           let identity=windows[windowId].identity=MailServices.accounts.getIdentity(params.identityId);
-          let maxConn=prefs.maxConn[accountId+'|'+params.identityId];
+          let maxConn=4;
 debug('using maxConn='+maxConn);
           mhs.every((mh) => {
             if (mh.sending) {
