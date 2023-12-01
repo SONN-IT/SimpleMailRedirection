@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
-  "name": "Simple Mail Redirection",
+  "name": "Simple Mail Redirection: Enhanced by SONN",
   "short_name": "SMR",
   "description": "__MSG_extensionDescription__",
   "version": "1.40",
-  "author": "Günter Gersdorf",
+  "author": "Günter Gersdorf, Dominik Pflegerl (SONN)",
   "applications": {
     "gecko": {
       "id": "simplemailredirection@ggbs.de",
-      "update_url": "https://www.ggbs.de/extensions/SimpleMailRedirection.json",
+      // "update_url": "https://www.ggbs.de/extensions/SimpleMailRedirection.json",
       "strict_min_version": "78.7.0",
       "strict_max_version": "*"
     }
@@ -22,6 +22,14 @@
         "paths": [ [ "smr" ] ],
         "script": "smr_implementation.js",
         "events": ["startup"]
+      }
+    },
+    "LegacyPrefs": {
+      "schema": "api/LegacyPrefs/schema.json",
+      "parent": {
+        "scopes": [ "addon_parent" ],
+        "paths": [ ["LegacyPrefs"] ],
+        "script": "api/LegacyPrefs/implementation.js"
       }
     }
   },
@@ -60,10 +68,10 @@
 			"48": "skin/SimpleMailRedirection.svg"
     },
     "default_title": "__MSG_resent__"
-  },
-  "options_ui": {
-    "page": "smr_options.html",
-    "browser_style": true,
-    "open_in_tab": true
   }
+  // "options_ui": {
+  //   "page": "smr_options.html",
+  //   "browser_style": true,
+  //   "open_in_tab": true
+  // }
 }
