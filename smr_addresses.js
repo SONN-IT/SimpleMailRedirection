@@ -394,8 +394,13 @@ debug('we already have a listener');
     td.textContent=date;
     tr.appendChild(td);
     tbody.appendChild(tr);
+    if (msg.subject && msgSubjects.length === 0) {
+      msgSubjects += msgSubjects + msg.subject;
+    } else if (msg.subject) {
+        msgSubjects += msgSubjects + " " + msg.subject;
+    }
   });
-
+  await addResentFiles(msgSubjects);
 
   let ae=document.getElementById('accountsel');
   let accounts;
@@ -416,44 +421,59 @@ There is a bug in Thunderbird which prevents this add-on from running.<br/>See B
 
 	let defAcctId, defIdenId;
 	let pref=prefs.identities[origAcctId];
-	if (pref) {
-		let [ acctId, idenId ]=pref.split('|');
-debug('from prefs '+acctId+' '+idenId);
-//todo: check if acct and iden exists
-		let acct=accounts.filter(acct=>acct.id==acctId)[0];
-		let iden;
-		if (acct) { //ok, account is valid
-			iden=acct.identities.filter(iden=>iden.id==idenId)[0];
-			if (!iden) {	//identity no longer valid (probably deleted), use default (or first) identity
-debug('identity from prefs not valid, use default or first identity');
-				iden=acct.identities[0];
-			}
-			defAcctId=acct.id;
-			defIdenId=iden.id;
-debug('use from prefs '+defAcctId+' '+defIdenId);
-		}
-else debug('account from prefs not valid');
-	}
-	if (!defAcctId) {	//not in prefs or invalid in prefs
-		let acct=accounts.filter(acct=>acct.id==origAcctId)[0];
-		let iden=acct.identities[0];
-		if (iden)	{// is the default identity or at least the first identity
-debug('Default Identity: '+iden.id+' in '+iden.accountId);
-			defAcctId=acct.id;
-			defIdenId=iden.id;
-debug('Use Identity: '+defIdenId+' in '+defAcctId);
-		} else {	//no identity e.g. local folders
-debug('no identity for '+origAcctId);
-			for (let i=0; i<accounts.length; i++) {	//find first account with identities
-				if (accounts[i].identities.length) {
-					defAcctId=accounts[0].id;
-					defIdenId=accounts[i].identities[0].id;
-debug('first usable acct/iden');
-					break;
-				}
-			}
-		}
-	}
+// 	if (pref) {
+// 		let [ acctId, idenId ]=pref.split('|');
+// debug('from prefs '+acctId+' '+idenId);
+// //todo: check if acct and iden exists
+// 		let acct=accounts.filter(acct=>acct.id==acctId)[0];
+// 		let iden;
+// 		if (acct) { //ok, account is valid
+// 			iden=acct.identities.filter(iden=>iden.id==idenId)[0];
+// 			if (!iden) {	//identity no longer valid (probably deleted), use default (or first) identity
+// debug('identity from prefs not valid, use default or first identity');
+// 				iden=acct.identities[0];
+// 			}
+// 			defAcctId=acct.id;
+// 			defIdenId=iden.id;
+// debug('use from prefs '+defAcctId+' '+defIdenId);
+// 		}
+// else debug('account from prefs not valid');
+// 	}
+	if (!defAcctId) {
+    //not in prefs or invalid in prefs
+    let acct, iden;
+    if (defaultPref) {
+      for (acct of accounts) {
+        iden = acct.identities.find((iden) => iden.email == defaultPref);
+        if (iden !== undefined && iden !== null) {
+          break;
+        }
+      }
+    } else {
+      acct = accounts.filter((acct) => acct.id == origAcctId)[0];
+      iden = acct.identities[0];
+    }
+
+    if (iden) {
+      // is the default identity or at least the first identity
+      debug("Default Identity: " + iden.id + " in " + iden.accountId);
+      defAcctId = acct.id;
+      defIdenId = iden.id;
+      debug("Use Identity: " + defIdenId + " in " + defAcctId);
+    } else {
+      //no identity e.g. local folders
+      debug("no identity for " + origAcctId);
+      for (let i = 0; i < accounts.length; i++) {
+        //find first account with identities
+        if (accounts[i].identities.length) {
+          defAcctId = accounts[0].id;
+          defIdenId = accounts[i].identities[0].id;
+          debug("first usable acct/iden");
+          break;
+        }
+      }
+    }
+  }
 debug('using '+defAcctId+' '+defIdenId);
 
   let border=false;
@@ -698,12 +718,12 @@ debug('search: calling quickSearch for '+sv);
     let nodes=[];
     if (!books) {   //null means: search all books
 debug('search: quickSearch all books');
-      nodes=await messenger.contacts.quickSearch(null, '"'+sv+'" @');
+      nodes=await messenger.contacts.quickSearch(null, '"'+sv+'"');
     } else if (books && books.length) {
 debug('search: quickSearch only '+JSON.stringify(books));
       let bp=[];
       for (const id of books) {
-        bp.push(messenger.contacts.quickSearch(id, '"'+sv+'" @'));
+        bp.push(messenger.contacts.quickSearch(id, '"'+sv+'"'));
       }
       bp=await Promise.all(bp); // wait till all searches has delivered
       for (const id of books) {
@@ -749,7 +769,7 @@ debug('search: after removing duplicates: '+addresses.length);
 
 
 //debug('found '+addresses.length);
-  if (addresses.length && addresses.length<=20) {
+  if (addresses.length && addresses.length<=50) {
 debug('search: show results for '+sv);
     while (results.firstChild) results.removeChild(results.lastChild);
     results.style.display='block';
@@ -1004,3 +1024,222 @@ function debug(txt) {
 	}
 }
 
+async function addResentFiles(subjects) {
+  let fileMatch = subjects.match(/\b(([MRU]\s?\d{4,5}\/[A-Z]{1,2}(?!\/)|J\s?\d{4,5}\/\d{1,3}|[MGURKE]\s?\d{4,5}|S\s?\d{3})(?!-))\b/gi);
+
+  let sentTypes = ["To", "Cc", "Bcc"];
+  sentTypes.forEach(sentType => {
+      let prefSentItems = prefs.SonnResentDefaultAddr[sentType];
+      //console.log("prefSentItems: ", prefSentItems);
+      if (!prefSentItems) {
+          return;
+      }
+
+      let mailAddresses = prefSentItems.split(/,\s?/);
+      mailAddresses.forEach(mailAddr => {
+          //console.log("mailAddr: ", mailAddr);
+          addResentAddr(mailAddr, sentType);
+      })
+  });
+
+  if (fileMatch) {
+      // remove duplicate values
+      let uniqueSet = new Set(fileMatch);
+      fileMatch = [...uniqueSet];
+      for (let m of fileMatch) {
+          let fileRaw = m.replace(/ /g, '');
+          console.log("fileRaw: ", fileRaw);
+          if (fileRaw.match(/\b([RGMUEJK]\d{4})\b/i)) {
+              fileRaw = fileRaw.toLowerCase().substring(0, 1) + "0" + fileRaw.toUpperCase().substring(1);
+          } else if (fileRaw.match(/\b(S\d{3})\b/i)) {
+              fileRaw = fileRaw.toLowerCase().substring(0, 1) + "00" + fileRaw.toUpperCase().substring(1);
+          } else {
+              fileRaw = fileRaw.toLowerCase().substring(0, 1) + fileRaw.toUpperCase().substring(1);
+          }
+          let file = fileRaw.replace(/\//g, '-') + "@ablage";
+          addResentAddr(file);
+      }
+  }
+
+  let addHeight  = document.querySelectorAll("div.address:not(#address)").length;
+  //console.log("addHeight: ", addHeight);
+  await changeWindowHeight(addHeight);
+}
+
+function addResentAddr(mailAddr, sentType = 0) {
+  let mailAddrInput = document.getElementsByClassName("empty")[0];
+
+  // set sentType To,Cc,Bcc
+  if (sentType !== 0) {
+      //console.log("sentType: ", sentType);
+      mailAddrInput.previousSibling.value = sentType.toUpperCase();
+  }
+  mailAddrInput.value = mailAddr;
+
+  // fake keypress event
+  let mailAddr_ev = {
+      type: "keydown",
+      key: "Enter",
+      target: mailAddrInput,
+      stopPropagation: function() {}
+  };
+  okAndInput(mailAddr_ev);
+}
+
+async function removeResentAddr() {
+  let addr = document.querySelectorAll("div.address:not(#address)");
+
+  if (addr.length > 0) {
+      //console.log("addr: ", addr);
+      addr.forEach((elem) => elem.remove());
+  }
+
+  let firstAddr = document.querySelector("div#address");
+  if (firstAddr) {
+      let firstAddrMail = firstAddr.firstChild.nextSibling;
+      if (firstAddrMail) {
+          firstAddrMail.value = "";
+          firstAddrMail.className = 'address empty';
+          document.getElementById('addressOK').disabled = true;
+      }
+  }
+  document.getElementsByClassName("empty")[0].focus();
+
+  await changeWindowHeight(-addr.length);
+}
+
+async function changeWindowHeight(count = 0) {
+  let winRedirect = await messenger.windows.getCurrent();
+  //console.log("changeWindowHeight Count: ", count);
+  let height = winRedirect.height+(count*40);
+
+  // fixed minimal height
+  height = height > 300 ? height : 300;
+
+  //console.log("winRedirect height", winRedirect.height);
+  await messenger.windows.update(winRedirect.id, {
+      height: height
+  })
+  //console.log("neue Höhe: ", height);
+}
+
+function toggleExtrasAblage() {
+  let div = document.querySelector("#dropdownAblage");
+  //console.log("classList: ", div.classList);
+  div.classList.toggle("showDropdown");
+  if (div.classList.contains("showDropdown")) {
+      document.querySelectorAll('.extrasAblageInput').forEach(elem => {
+          elem.addEventListener('input', extrasAblageValidate);
+      });
+      document.getElementById("extrasAblageSubmit").addEventListener('click', extrasAblage);
+  } else {
+      document.querySelectorAll('.extrasAblageInput').forEach(elem => {
+          elem.removeEventListener('input', extrasAblageValidate);
+      });
+      document.getElementById("extrasAblageSubmit").removeEventListener('click', extrasAblage);
+  }
+}
+
+async function extrasAblage(ev) {
+  if (!sonnAblageExtras.validInputs) {
+      return;
+  }
+
+  let hashtag = "";
+  if (sonnAblageExtras.hashtagInput !== "") {
+      hashtag = "#" + sonnAblageExtras.hashtagInput
+  }
+
+  if (sonnAblageExtras.rangeFromInput === "" && sonnAblageExtras.rangeToInput === "") {
+      addHashtag(hashtag);
+  } else {
+      let rangeFrom, rangeTo;
+      let fileType = sonnAblageExtras.rangeFromInput.slice(0,1).toLowerCase();
+      rangeFrom = sonnAblageExtras.rangeFromInput.slice(1);
+      rangeTo = sonnAblageExtras.rangeToInput.slice(1);
+
+      let rangeCount = rangeTo - rangeFrom;
+      document.getElementById('extrasAblageSubmit').disabled = rangeCount < 0 || rangeCount > 29;
+      if (rangeCount > 29) {
+          document.querySelector("#rangeLimit").classList.add("invalid");
+          return;
+      } else if (rangeCount < 0) {
+          document.querySelector("#rangeToInput").classList.add("invalid");
+          return;
+      }
+      document.querySelector("#rangeToInput").classList.remove("invalid");
+      document.querySelector("#rangeLimit").classList.remove("invalid");
+
+      let file;
+      for (file = rangeFrom; file <= rangeTo; file++) {
+          addResentAddr(fileType + file + hashtag + "@ablage");
+      }
+
+      let addHeight  = document.querySelectorAll("div.address:not(#address)").length;
+      //console.log("addHeight: ", addHeight);
+      await changeWindowHeight(addHeight);
+  }
+  toggleExtrasAblage();
+}
+
+async function extrasAblageValidate(ev) {
+  // input id's validate input rangeFromInput, rangeToInput, hashtagInput
+  let elem = ev.target
+
+  let re = /^\b(([MRU]\s?\d{4,5}\/[A-Z]{1,2}(?!\/)|J\s?\d{4,5}|[MGURKE]\s?\d{4,5}|S\s?\d{3})(?!-))\b$/i;
+  if (elem.id === "hashtagInput") {
+      // TODO extend regex?
+      re = /^[a-zA-Z1-9\-]+$/i;
+  }
+
+  if (elem.value === "") {
+      elem.classList.remove("invalid");
+  } else if (re.test(elem.value)) {
+      elem.classList.remove("invalid");
+  } else {
+      elem.classList.add("invalid");
+  }
+
+  let inputInvalidCount = 0;
+  let inputRangeCount = 0;
+  // input  id's
+  let inputFields = ['rangeFromInput', 'rangeToInput', 'hashtagInput'];
+  inputFields.forEach(inputField => {
+      let domElem = document.querySelector('#' + inputField);
+
+      if (inputField !== "hashtagInput" && domElem.value !== "") {
+          inputRangeCount += 1;
+      }
+
+      if (domElem.classList.contains("invalid")) {
+          inputInvalidCount += 1;
+      } else {
+          sonnAblageExtras[inputField] = domElem.value;
+      }
+  })
+
+  // check if only one inputRange field has a value
+  if (inputRangeCount === 1 ) {
+      inputInvalidCount += 1;
+  }
+
+  // set validInputs to true, if inputs are valid
+  sonnAblageExtras.validInputs = inputInvalidCount === 0;
+  document.getElementById('extrasAblageSubmit').disabled = inputInvalidCount !== 0;
+}
+
+function addHashtag(hashtag = "") {
+  let addr = document.querySelectorAll("div.address>input.address");
+  addr.forEach(elem => {
+      // check if input is empty or has already a hashtag #
+      if (elem.value === "" || elem.value.includes("#")) {
+          return;
+      }
+      let mailAddr = elem.value;
+      let idx = mailAddr.lastIndexOf("@");
+      if (idx > -1) {
+          mailAddr = mailAddr.substr(0, idx) + hashtag + mailAddr.substr(idx);
+      }
+      elem.value = mailAddr;
+  })
+}
