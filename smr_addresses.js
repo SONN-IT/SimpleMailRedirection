@@ -341,7 +341,7 @@ debug('we already have a listener');
 	document.getElementById("accountsel").addEventListener('change', accountchange);
 	// document.getElementById("maxConn").addEventListener('change', changemaxconn);
 	document.getElementById("changefrom").addEventListener('change', togglechangefrom);
-	document.getElementById("closeonsuccess").addEventListener('change', togglecloseonsuccess);
+	// document.getElementById("closeonsuccess").addEventListener('change', togglecloseonsuccess);
 	document.getElementById("delay").addEventListener('change', changedelay);
 	document.getElementById("debug").addEventListener('change', toggledebug);
 	document.getElementById("default").addEventListener('click', setDefaultAddresses);
@@ -493,7 +493,7 @@ debug('using '+defAcctId+' '+defIdenId);
   });
 
 	document.getElementById("copy").checked=prefs.copytosent
-	document.getElementById("closeonsuccess").checked=prefs.closeonsuccess
+	// document.getElementById("closeonsuccess").checked=prefs.closeonsuccess
 	document.getElementById('delay').value=prefs.delay;
 	document.getElementById('debug').checked=prefs.debug;
 
