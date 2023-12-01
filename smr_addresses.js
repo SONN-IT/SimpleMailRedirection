@@ -48,11 +48,11 @@ function validate(elem) {
 //debug('validate emails: valid='+v+' invalid='+i);
   if (!i && v) {
     document.getElementById('addressOK').disabled=false;
-    document.getElementById('default').disabled=false;
+    // document.getElementById('default').disabled=false;
 		allValid=true;
   } else {
     document.getElementById('addressOK').disabled=true;
-    if (i) document.getElementById('default').disabled=true;
+    // if (i) document.getElementById('default').disabled=true;
 		allValid=false;
   }
 }
@@ -304,10 +304,18 @@ debug('no more messages, allowResend='+allowResend);
 
 async function load() {
   wid=(await messenger.windows.getCurrent()).id;
-  prefs=await messenger.storage.local.get({debug: false, delay: 2, size: 0,
-      identities: {}, changefrom: {}, maxConn: {},
-      copytosent: false, closeonsuccess: true, defaults: {},
-      tbBooks: null, cbBooks: null
+  prefs = await messenger.storage.local.get({
+    debug: false,
+    delay: 2,
+    size: 0,
+    identities: {},
+    changefrom: {},
+    maxConn: {},
+    copytosent: true,
+    closeonsuccess: true,
+    defaults: {},
+    tbBooks: null,
+    cbBooks: null,
   });
     //dont use storage.local.get() (without arg), see https://thunderbird.topicbox.com/groups/addons/T46e96308f41c0de1
   if (!prefs.defaults['*']) prefs.defaults['*']=[];
