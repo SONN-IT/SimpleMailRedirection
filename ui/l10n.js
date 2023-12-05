@@ -6,7 +6,7 @@
 
 var l10n = {
   updateString(string) {
-    return string.replace(/__MSG_(.+?)__/g, matched => {
+    return string.replace(/__MSG_(.+?)__/g, (matched) => {
       const key = matched.slice(6, -2);
       return chrome.i18n.getMessage(key) || matched;
     });
@@ -14,10 +14,8 @@ var l10n = {
 
   $log(message, ...args) {
     message = `l10s: ${message}`;
-    if (typeof window.log === 'function')
-      log(message, ...args);
-    else
-      console.log(message, ...args);
+    if (typeof window.log === "function") log(message, ...args);
+    else console.log(message, ...args);
   },
 
   updateSubtree(node) {
@@ -49,9 +47,13 @@ var l10n = {
 
   updateDocument() {
     this.updateSubtree(document);
-  }
+  },
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  l10n.updateDocument();
-}, { once: true });
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    l10n.updateDocument();
+  },
+  { once: true }
+);

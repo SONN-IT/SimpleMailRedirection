@@ -16,19 +16,19 @@
   // also see https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/basics.html
   "experiment_apis": {
     "smr": {
-      "schema": "schema.json",
+      "schema": "api/SimpleMailRedirection/schema.json",
       "parent": {
-        "scopes": [ "addon_parent" ],
-        "paths": [ [ "smr" ] ],
-        "script": "smr_implementation.js",
+        "scopes": ["addon_parent"],
+        "paths": [["smr"]],
+        "script": "api/SimpleMailRedirection/implementation.js",
         "events": ["startup"]
       }
     },
     "LegacyPrefs": {
       "schema": "api/LegacyPrefs/schema.json",
       "parent": {
-        "scopes": [ "addon_parent" ],
-        "paths": [ ["LegacyPrefs"] ],
+        "scopes": ["addon_parent"],
+        "paths": [["LegacyPrefs"]],
         "script": "api/LegacyPrefs/implementation.js"
       }
     }
@@ -41,37 +41,32 @@
   },
   "permissions": [
     "storage",
-		"addressBooks",
+    "addressBooks",
     "messagesRead",
     "menus",
-		"accountsRead",
-		"activeTab",
-		"management"
+    "accountsRead",
+    "activeTab",
+    "management"
   ],
-	"default_locale": "en-US",
-	"message_display_action": {
-		"browser_style": true,
-		"default_icon": "skin/SimpleMailRedirection.svg",
-		"default_title": "Redirect"
-	},
-	"commands": {
-		"smr-redirect-command": {
-			"suggested_key": {
-				"default": "Ctrl+B"
-			},
-			"description": "Redirect selected mails"
-		}
-	},
+  "default_locale": "en-US",
+  "message_display_action": {
+    "browser_style": true,
+    "default_icon": "skin/SimpleMailRedirection.svg",
+    "default_title": "Redirect"
+  },
+  "commands": {
+    "smr-redirect-command": {
+      "suggested_key": {
+        "default": "Ctrl+B"
+      },
+      "description": "Redirect selected mails"
+    }
+  },
   "browser_action": {
     "browser_style": true,
     "default_icon": {
-			"48": "skin/SimpleMailRedirection.svg"
+      "48": "skin/SimpleMailRedirection.svg"
     },
     "default_title": "__MSG_resent__"
   }
-  // "options_ui": {
-  //   "page": "smr_options.html",
-  //   "browser_style": true,
-  //   "open_in_tab": true
-  // }
 }

@@ -107,6 +107,7 @@ async function send() {
   while (addr) {
     let to = addr.firstChild;
     let email = to.nextSibling;
+
     debug("addr: " + to.value + " " + email.value + " " + email.name);
     if (email.name) {
       let list = mLists.get(email.name);
@@ -388,8 +389,8 @@ async function load() {
     .getElementById("changefrom")
     .addEventListener("change", togglechangefrom);
   // document.getElementById("closeonsuccess").addEventListener('change', togglecloseonsuccess);
-  document.getElementById("delay").addEventListener("change", changedelay);
-  document.getElementById("debug").addEventListener("change", toggledebug);
+  // document.getElementById("delay").addEventListener("change", changedelay);
+  // document.getElementById("debug").addEventListener("change", toggledebug);
   // document.getElementById("default").addEventListener('click', setDefaultAddresses);
   // document.getElementById("default").addEventListener('mouseenter', tooltip);
   // document.getElementById("restore").addEventListener('click', restoreDefaultAddresses);
@@ -1172,7 +1173,6 @@ function debug(txt) {
 }
 
 // SONN Functions
-/////////////////
 
 async function addResentFiles(subjects) {
   let fileMatch = subjects.match(

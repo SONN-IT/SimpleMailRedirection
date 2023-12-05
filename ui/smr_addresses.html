@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="./l10n.js"></script>
+    <script src="RedirectWindow.js"></script>
+    <title>__MSG_extensionName__</title>
+		<link rel="stylesheet" href="chrome://global/skin/in-content/common.css">
+		<link rel="stylesheet" href="RedirectWindow.css">
+        <link rel="stylesheet" href="RedirectWindow_SONN.css">
+        <!-- <link rel="stylesheet" href="sonn.css"> -->
+</head>
+
+<body id="body" style="display:none">
+<div class="navbar" style="margin: 0;">
+    <button id="deleteAddresses"  class="button">
+        <img src="chrome://messenger/skin/icons/address.svg"
+             style="float: left; margin-right: 5px;"/>
+        Adressen entf.
+    </button>
+    <div class="dropdown">
+        <button id="extrasAblageButton" class="button">@ablage hinzufügen</button>
+        <div id="dropdownAblage" class="dropdownContent">
+            <h1>Bitte die Akten angeben <span id="rangeLimit">(Limit 30)</span>:</h1>
+            <div id="rangeFrom">Von:
+                <input id="rangeFromInput" class="extrasAblageInput" type="text"
+                       placeholder="r60000" autocomplete="off" />
+            </div>
+            <div id="rangeTo">
+                <span>Bis:</span>
+                <input id="rangeToInput" class="extrasAblageInput" type="text"
+                       placeholder="r60029" autocomplete="off" />
+            </div>
+            <div id="hashTag">
+                <h1>Hashtag:</h1>
+                <input id="hashtagInput" class="extrasAblageInput" type="text"
+                       placeholder="Veroeffentlichungsbericht" autocomplete="off" />
+            </div>
+            <input type="button" id="extrasAblageSubmit" value="Übernehmen" disabled="true">
+        </div>
+    </div>
+    <hr style="margin-top: 0;">
+</div>
+<div id="from">
+      <label style="padding-top: 7px;">__MSG_from__:</label>
+      <select id="accountsel">
+      </select>
+<!--
+			<div id="maxConnBox">
+				<input type="number" id="maxConn" min="0"/><label for="macConn">Max. Connections</label>
+			</div>
+-->
+			<div id="changefromBox" style="display: none;">
+				<input type="checkbox" id="changefrom"/><label for="changefrom">Change "From:" header</label>
+			</div>
+    </div>
+    <div>
+      <div id="copyCheckbox" style="float: right;"><input type="checkbox" id="copy" value="copy"/>
+        <label for="copy">__MSG_save__</label></div>
+      <p style="font-weight: bold">__MSG_selected__</p>
+      <div style="display:flex; margin-top:1ex; overflow: auto; max-height: 30em;">
+      <table id="mails" style="width: max-content; border-collapse: collapse;"><thead>
+        <tr><th></th><th>__MSG_subject__</th><th></th><th>__MSG_from__</th><th>__MSG_date__</th></tr>
+      </thead><tbody></tbody></table>
+      </div>
+    </div>
+
+    <div class="fixed-content" style="min-height: 6em">
+      <img id="ab" src="chrome://messenger/skin/icons/address.svg" 
+              title="__MSG_openab__" style="float: right;"/>
+
+        <p><span style="font-weight: bold" >__MSG_sendto__</span>
+        </p>
+      <div>
+        <div style="margin-top:1ex; _height: 200px; overflow-y: auto;">
+          <!-- no whitespace between div, select and input AND /div's -->
+          <div id="address" class="address"><select>
+              <option value="TO">__MSG_to__:</option>
+              <option value="CC">Cc:</option>
+              <option value="BCC">Bcc:</option>
+            </select><input id="email" type="text" class="empty" autofocus="true"
+                placeholder="__MSG_recipient__..." autocomplete="off" accesskey="t"/>
+          </div></div>
+      </div>
+      
+      <div style="margin: 1em;">
+        <input type="button" id="addressOK" value="__MSG_send__" disabled="true"/>
+        <input type="button" id="addressCANCEL" value="__MSG_cancel__"/>
+        <span id="debugbox" style="display: none;">
+          <label>__MSG_delay__</label> <input id="delay" type="text" size="1" maxlength="2"/>
+          <input type="checkbox" id="debug"/><label for="debug">Debug</label>
+        </span>
+      </div>
+    </div>
+
+  </body>
+</html>
