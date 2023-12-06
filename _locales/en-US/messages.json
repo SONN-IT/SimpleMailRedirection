@@ -3,7 +3,7 @@
         "message": "Simple Mail Redirection: Enhanced by SONN"
     },
     "extensionDescription": {
-        "message": "Allows you to resend (also known as redirect) email messages."
+        "message": "Enables email redirection, making it appear to recipients as though the mail was sent directly to them."
     },
     "selected": {
         "message": "The following mails will be redirected:"

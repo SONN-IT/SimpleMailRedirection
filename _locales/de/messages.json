@@ -3,7 +3,7 @@
         "message": "Simple Mail Redirection: Enhanced by SONN"
     },
     "extensionDescription": {
-        "message": "Ermöglicht das erneute Senden (auch als Umleiten bezeichnet) von E-Mail Nachrichten."
+        "message": "Ermöglicht das Umleiten von E-Mails, sodass für den Empfänger die Nachricht wie direkt gesendet erscheint."
     },
     "selected": {
         "message": "Folgende Nachrichten werden umgeleitet:"
