@@ -159,6 +159,13 @@
   "reloadoptions": {
       "default": "Please reopen the options dialog",
       "de": "Bitte die Einstellungen neu öffnen"
+  },
+  "settingsHeader": {
+    "default": "Simple Mail Redirection - Settings",
+    "de": "Simple Mail Redirection - Einstellungen"
+  },
+  "settingsDescription": {
+    "default": "Configure your default recipient for mail redirection. These settings will pre-populate the recipient fields every time you redirect an email.",
+    "de": "Durch die Konfiguration des Standardempfängers für die E-Mail-Weiterleitung werden die Empfängerfelder bei jeder Umleitung automatisch mit den festgelegten Adressen gefüllt."
   }
-
 }

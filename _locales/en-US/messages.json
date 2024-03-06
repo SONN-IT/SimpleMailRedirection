@@ -1,89 +1,95 @@
 {
-    "extensionName": {
-        "message": "Simple Mail Redirection: Enhanced by SONN"
-    },
-    "extensionDescription": {
-        "message": "Enables email redirection, making it appear to recipients as though the mail was sent directly to them."
-    },
-    "selected": {
-        "message": "The following mails will be redirected:"
-    },
-    "subject": {
-        "message": "Subject"
-    },
-    "from": {
-        "message": "From"
-    },
-    "date": {
-        "message": "Date"
-    },
-    "send": {
-        "message": "Send"
-    },
-    "cancel": {
-        "message": "Cancel"
-    },
-    "close": {
-        "message": "Close"
-    },
-    "resent": {
-        "message": "Redirect"
-    },
-    "to": {
-        "message": "To"
-    },
-    "sendto": {
-        "message": "Send this item to:"
-    },
-    "save": {
-        "message": "Save this message"
-    },
-    "recipient": {
-        "message": "Recipient"
-    },
-    "closeonsuccess": {
-        "message": "Close this window."
-    },
-    "delay": {
-        "message": "Delay:"
-    },
-    "done": {
-        "message": "Done"
-    },
-    "default": {
-        "message": "Save As"
-    },
-    "restore": {
-        "message": "Recover"
-    },
-    "list": {
-        "message": "List"
-    },
-    "defaulttitle": {
-        "message": "Set as Default"
-    },
-    "restoretitle": {
-        "message": "Restore Default Set"
-    },
-    "openab": {
-        "message": "Open Address Book"
-    },
-    "filter": {
-        "message": "Redirect To:"
-    },
-    "needvalidaddress": {
-        "message": "Please enter a valid e-mail address"
-    },
-    "books": {
-        "message": "Address Books"
-    },
-    "allbooks": {
-        "message": "All Address Books"
-    },
-    "searchin": {
-        "message": "Search in:"
-    },
-    "reloadoptions": {
-        "message": "Please reopen the options dialog"
-    }
+  "extensionName": {
+    "message": "Simple Mail Redirection: Enhanced by SONN"
+  },
+  "extensionDescription": {
+    "message": "Enables email redirection, making it appear to recipients as though the mail was sent directly to them."
+  },
+  "selected": {
+    "message": "The following mails will be redirected:"
+  },
+  "subject": {
+    "message": "Subject"
+  },
+  "from": {
+    "message": "From"
+  },
+  "date": {
+    "message": "Date"
+  },
+  "send": {
+    "message": "Send"
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "resent": {
+    "message": "Redirect"
+  },
+  "to": {
+    "message": "To"
+  },
+  "sendto": {
+    "message": "Send this item to:"
+  },
+  "save": {
+    "message": "Save this message"
+  },
+  "recipient": {
+    "message": "Recipient"
+  },
+  "closeonsuccess": {
+    "message": "Close this window."
+  },
+  "delay": {
+    "message": "Delay:"
+  },
+  "done": {
+    "message": "Done"
+  },
+  "default": {
+    "message": "Save As"
+  },
+  "restore": {
+    "message": "Recover"
+  },
+  "list": {
+    "message": "List"
+  },
+  "defaulttitle": {
+    "message": "Set as Default"
+  },
+  "restoretitle": {
+    "message": "Restore Default Set"
+  },
+  "openab": {
+    "message": "Open Address Book"
+  },
+  "filter": {
+    "message": "Redirect To:"
+  },
+  "needvalidaddress": {
+    "message": "Please enter a valid e-mail address"
+  },
+  "books": {
+    "message": "Address Books"
+  },
+  "allbooks": {
+    "message": "All Address Books"
+  },
+  "searchin": {
+    "message": "Search in:"
+  },
+  "reloadoptions": {
+    "message": "Please reopen the options dialog"
+  },
+  "settingsHeader": {
+    "message": "Simple Mail Redirection - Settings"
+  },
+  "settingsDescription": {
+    "message": "Configure your default recipient for mail redirection. These settings will pre-populate the recipient fields every time you redirect an email."
+  }
 }

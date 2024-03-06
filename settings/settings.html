@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="./l10n.js"></script>
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+    <script type="application/javascript" src="settings.js"></script>
+    <div id="form">
+        <h2>__MSG_settingsHeader__</h2>
+        <p>__MSG_settingsDescription__</p>
+        <div id="ResentToAddress" class="address">
+            <div class="formLabel"><label for="ResentToInput">__MSG_to__:</label></div>
+            <div class="formInput">
+                <input type="text" class="empty" id="ResentToInput" placeholder="user@sonn.at, user2@sonn.at"
+                    autocomplete="off" />
+            </div>
+        </div>
+
+        <div id="ResentCcAddress" class="address">
+            <div class="formLabel"><label for="ResentCcInput">CC:</label></div>
+            <div class="formInput">
+                <input type="text" class="empty" id="ResentCcInput" placeholder="user@sonn.at, user2@sonn.at"
+                    autocomplete="off" />
+            </div>
+        </div>
+        <div id="ResentBccAddress" class="address">
+            <div class="formLabel"><label for="ResentBccInput">BCC:</label></div>
+            <div class="formInput">
+                <input type="text" class="empty" id="ResentBccInput" placeholder="user@sonn.at, user2@sonn.at"
+                    autocomplete="off" />
+            </div>
+        </div>
+        <br>
+        <div class="saveInput">
+            <input type="button" id="addressOK" value="Speichern" disabled>
+        </div>
+    </div>
+
+</body>
+
+</html>
