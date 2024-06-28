@@ -106,7 +106,7 @@ var redirect = {
       ]);
 
       let minHeight = 300 + (this.msgs.length > 5 ? 150 : this.msgs.length * 30);
-      let minWidth = 800;
+      let minWidth = 600;
 
       let height = pos.height ? Math.max(pos.height, minHeight) : minHeight;
       let width = pos.width ? Math.max(pos.width, minWidth) : minWidth;

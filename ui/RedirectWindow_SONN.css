@@ -5,8 +5,9 @@ html {
 body {
   background-color: #cac5c0;
   height: 100vh;
-  /* min-height: 300px; */
+  min-height: 300px;
   width: 100vw;
+  min-width: 600px;
   margin: 0;
   padding: 0;
   display: flex;
