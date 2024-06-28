@@ -104,7 +104,7 @@ var redirect = {
         "size",
       ]);
       //setting top and left in .create() does not work!
-      let height = 270 + 80;
+      let height = 300;
       if(this.msgs.length > 5) {
         height += 150
       } else {
