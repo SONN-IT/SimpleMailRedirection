@@ -8,12 +8,10 @@
   "applications": {
     "gecko": {
       "id": "SimpleMailRedirection@SONN",
-      // "update_url": "https://www.ggbs.de/extensions/SimpleMailRedirection.json",
       "strict_min_version": "78.7.0",
       "strict_max_version": "*"
     }
   },
-  // also see https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/basics.html
   "experiment_apis": {
     "smr": {
       "schema": "api/SimpleMailRedirection/schema.json",
