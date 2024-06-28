@@ -1,0 +1,5 @@
+- Improve dropdown list by letting it disappear when clicking it outside
+- Move dropdwon list above input, so it won't interfer with the height of the window?
+- Enfore a min width and height of the window
+- Redirection icons are still missing
+- Update to latest 1.44
