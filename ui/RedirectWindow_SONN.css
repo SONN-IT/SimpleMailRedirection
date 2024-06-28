@@ -68,9 +68,12 @@ select {
 
 #results {
   position: absolute;
-  margin: 2.5em 0 0 6.3em;
+  margin: 0 0 0 6.75em;
+  padding: 0;
+  max-height: 4.75em;
   z-index: 1000;
   width: inherit;
+  background-color: whitesmoke;
 }
 
 .address {
@@ -85,7 +88,8 @@ select {
 }
 
 .address > select {
-  width: 75px;
+  /* width: 75px; */
+  width: 6em;
   height: inherit;
   padding: 0px !important;
   padding-left: 5px !important; 
@@ -99,7 +103,7 @@ select {
 }
 
 .address > input[type="text"] {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 1em;
   width: calc(100% - 30px);
   height: inherit;
   padding: 5px;
