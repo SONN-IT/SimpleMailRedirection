@@ -400,6 +400,9 @@ async function load() {
     .getElementById("deleteAddresses")
     .addEventListener("click", removeResentAddr);
   document
+    .getElementById("removeEntry")
+    .addEventListener("click", removeEntry);
+  document
     .getElementById("extrasAblageButton")
     .addEventListener("click", toggleExtrasAblage);
   // document.getElementById("defName").addEventListener('input', (event)=>{
@@ -1244,6 +1247,29 @@ function addResentAddr(mailAddr, sentType = 0) {
     stopPropagation: function () {},
   };
   okAndInput(mailAddr_ev);
+}
+
+// Function to remove the address field
+async function removeEntry() {
+  let addr = document.querySelectorAll("div.address:not(#address)");
+
+  if (addr.length > 0) {
+    //console.log("addr: ", addr);
+    addr.forEach((elem) => elem.remove());
+  }
+
+  let firstAddr = document.querySelector("div#address");
+  if (firstAddr) {
+    let firstAddrMail = firstAddr.firstChild.nextSibling;
+    if (firstAddrMail) {
+      firstAddrMail.value = "";
+      firstAddrMail.className = "address empty";
+      document.getElementById("addressOK").disabled = true;
+    }
+  }
+  document.getElementsByClassName("empty")[0].focus();
+
+  await changeWindowHeight(-addr.length);
 }
 
 async function removeResentAddr() {

@@ -83,20 +83,21 @@
 
     <div class="fixed-content" style="min-height: 6em">
       <div class="address-list">
-      <!-- WARNING - no whitespace between div, select and input AND /div's or address input will NOT work -->
+        <!-- WARNING - no whitespace between div, select and input AND /div's or address input will NOT work -->
         <div id="address" class="address"><select>
             <option value="TO">__MSG_to__:</option>
             <option value="CC">Cc:</option>
             <option value="BCC">Bcc:</option>
           </select><input id="email" type="text" class="empty" autofocus="true" placeholder="__MSG_recipient__..."
-            autocomplete="off" accesskey="t" />
+            autocomplete="off" accesskey="t" /><button type="button" id="removeEntry" class="delete-btn"><img src="./icons/close.svg" style="height: 75%;"></button>
         </div></div>
+
 
       <div class="button-group">
         <input type="button" id="addressOK" value="__MSG_send__" disabled="true" />
         <input type="button" id="addressCANCEL" value="__MSG_cancel__" />
         <img id="ab" src="./icons/address-book.svg" title="__MSG_openab__" />
-        
+
         <!-- Debug Box Start -->
         <span id="debugbox" style="display: none">
           <label>__MSG_delay__</label>
