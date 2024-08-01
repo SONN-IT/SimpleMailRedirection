@@ -103,12 +103,15 @@ var redirect = {
         "width",
         "size",
       ]);
+      debug("pos=" + JSON.stringify(pos));
 
       let minHeight = 300 + (this.msgs.length > 5 ? 150 : this.msgs.length * 30);
       let minWidth = 700;
+      debug("minHeight=" + minHeight + " minWidth=" + minWidth);
 
       let height = pos.height ? Math.max(pos.height, minHeight) : minHeight;
       let width = pos.width ? Math.max(pos.width, minWidth) : minWidth;
+      debug("creation height=" + height + " width=" + width);
 
       let win = await messenger.windows.create({
         height: height,
