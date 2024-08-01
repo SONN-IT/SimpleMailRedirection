@@ -103,22 +103,22 @@ var redirect = {
         "width",
         "size",
       ]);
-      //setting top and left in .create() does not work!
-      let height = 270 + 30;
-      if(this.msgs.length > 5) {
-        height += 150
-      } else {
-        height += (this.msgs.length) * 30;
-      }
-      //if (height<pos.height) height=pos.height;
+      debug("pos=" + JSON.stringify(pos));
+
+      let minHeight = 300 + (this.msgs.length > 5 ? 150 : this.msgs.length * 30);
+      let minWidth = 900;
+      debug("minHeight=" + minHeight + " minWidth=" + minWidth);
+
+      let height = pos.height ? Math.max(pos.height, minHeight) : minHeight;
+      let width = pos.width ? Math.max(pos.width, minWidth) : minWidth;
+      debug("creation height=" + height + " width=" + width);
+
       let win = await messenger.windows.create({
         height: height,
-        width: pos.width ? pos.width : 800,
+        width: width,
         allowScriptsToClose: true,
         url: "ui/RedirectWindow.html",
-        // url: "ui/smr_addresses.html",
         type: "popup",
-        //'normal' opens  new mail:3pane window with smr as additional tab
       });
 
       debug("screen=" + screen.width + "x" + screen.height);
@@ -137,14 +137,7 @@ var redirect = {
           left: pos.left,
         });
       }
-      /*
-      let t=await messenger.tabs.create({
-        active: true,
-        url: "/smr_addresses.html"
-      });
-*/
-      //TODO: get real window for w.id
-      //TODO: window,resizeTo(width, height) oder window.resizeBy(xDelta, yDelta)  im implementation
+       
     } else {
       console.log("SMR: No message selected");
     }
