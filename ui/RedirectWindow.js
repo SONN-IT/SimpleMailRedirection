@@ -1141,7 +1141,7 @@ async function removeWin() {
   let wInfo = await messenger.windows.get(win.id);
   prefs.top = wInfo.top;
   prefs.left = wInfo.left;
-  prefs.height=wInfo.height;
+  prefs.height= wInfo.height;
   prefs.width = wInfo.width;
   await messenger.storage.local.set(prefs);
   debug("positioned window now at " + prefs.left + "x" + prefs.top);
@@ -1271,7 +1271,7 @@ async function removeResentAddr() {
 async function changeWindowHeight(count = 0) {
   let winRedirect = await messenger.windows.getCurrent();
   //console.log("changeWindowHeight Count: ", count);
-  let height = winRedirect.height + count * 40;
+  let height = winRedirect.height + count * 0;
 
   // fixed minimal height
   height = height > 300 ? height : 300;
