@@ -96,7 +96,6 @@ var redirect = {
 
       //id=1 folder={"accountId":"account1","name":"Posteingang","path":"/INBOX","type":"inbox"}
       messenger.runtime.onMessage.addListener(this.handleMessage);
-      messenger.runtime.onMessage.addListener(this.handleMessage);
       let pos = await messenger.storage.local.get([
         "top",
         "left",
