@@ -3,7 +3,7 @@
   "name": "Simple Mail Redirection: Enhanced by SONN",
   "short_name": "SMR",
   "description": "__MSG_extensionDescription__",
-  "version": "1.40.1",
+  "version": "1.40.1.1",
   "author": "Günter Gersdorf, Dominik Pflegerl (SONN)",
   "applications": {
     "gecko": {
