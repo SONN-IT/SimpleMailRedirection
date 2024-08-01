@@ -106,7 +106,7 @@ var redirect = {
       debug("pos=" + JSON.stringify(pos));
 
       let minHeight = 300 + (this.msgs.length > 5 ? 150 : this.msgs.length * 30);
-      let minWidth = 700;
+      let minWidth = 900;
       debug("minHeight=" + minHeight + " minWidth=" + minWidth);
 
       let height = pos.height ? Math.max(pos.height, minHeight) : minHeight;
