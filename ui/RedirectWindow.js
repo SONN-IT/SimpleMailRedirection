@@ -1220,10 +1220,6 @@ async function addResentFiles(subjects) {
       addResentAddr(file);
     }
   }
-
-  let addHeight = document.querySelectorAll("div.address:not(#address)").length;
-  //console.log("addHeight: ", addHeight);
-  await changeWindowHeight(addHeight);
 }
 
 function addResentAddr(mailAddr, sentType = 0) {
@@ -1264,23 +1260,6 @@ async function removeResentAddr() {
     }
   }
   document.getElementsByClassName("empty")[0].focus();
-
-  await changeWindowHeight(-addr.length);
-}
-
-async function changeWindowHeight(count = 0) {
-  let winRedirect = await messenger.windows.getCurrent();
-  //console.log("changeWindowHeight Count: ", count);
-  let height = winRedirect.height + count * 0;
-
-  // fixed minimal height
-  height = height > 300 ? height : 300;
-
-  //console.log("winRedirect height", winRedirect.height);
-  await messenger.windows.update(winRedirect.id, {
-    height: height,
-  });
-  //console.log("neue Höhe: ", height);
 }
 
 function toggleExtrasAblage() {
@@ -1342,12 +1321,6 @@ async function extrasAblage(ev) {
     for (file = rangeFrom; file <= rangeTo; file++) {
       addResentAddr(fileType + file + hashtag + "@ablage");
     }
-
-    let addHeight = document.querySelectorAll(
-      "div.address:not(#address)"
-    ).length;
-    //console.log("addHeight: ", addHeight);
-    await changeWindowHeight(addHeight);
   }
   toggleExtrasAblage();
 }
