@@ -1141,7 +1141,7 @@ async function removeWin() {
   let wInfo = await messenger.windows.get(win.id);
   prefs.top = wInfo.top;
   prefs.left = wInfo.left;
-  prefs.height= wInfo.height;
+  prefs.height = wInfo.height;
   prefs.width = wInfo.width;
   await messenger.storage.local.set(prefs);
   debug("positioned window now at " + prefs.left + "x" + prefs.top);
