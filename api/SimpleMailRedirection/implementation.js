@@ -235,11 +235,11 @@ var smr = class extends ExtensionCommon.ExtensionAPI {
     let app = Services.appinfo;
     console.logStringMessage(
       "SimpleMailRedirection: " +
-        addOn.version +
-        " on " +
-        app.name +
-        " " +
-        app.version
+      addOn.version +
+      " on " +
+      app.name +
+      " " +
+      app.version
     );
     appVersion = app.version.replace(/^(\d+\.\d+)(\..*)?$/, "$1");
   }
@@ -346,18 +346,9 @@ nsMsgSendListener.prototype = {
       debug("nsMsgSendListener.onStartSending: notify popup window");
       debug(
         "nsMsgSendListener.onStartSending: windowId=" +
-          this.windowId +
-          " " +
-          windows[this.windowId]
-      );
-      console.debug(
-        "SMR: nsMsgSendListener.onStartSending: notify popup window"
-      );
-      console.debug(
-        "SMR: nsMsgSendListener.onStartSending: windowId=" +
-          this.windowId +
-          " " +
-          windows[this.windowId]
+        this.windowId +
+        " " +
+        windows[this.windowId]
       );
       windows[this.windowId].fire.async({
         msgid: this.msgId,
@@ -371,21 +362,21 @@ nsMsgSendListener.prototype = {
   onStopSending(aMsgID, aStatus, aMsg, returnFileSpec) {
     debug(
       "nsMsgSendListener.onStopSending " +
-        aMsgID +
-        ", " +
-        aStatus +
-        ", " +
-        aMsg +
-        ", " +
-        returnFileSpec +
-        " " +
-        this.msgUri
+      aMsgID +
+      ", " +
+      aStatus +
+      ", " +
+      aMsg +
+      ", " +
+      returnFileSpec +
+      " " +
+      this.msgUri
     );
     debug(
       "nsMsgSendListener.onStopSending windowId=" +
-        this.windowId +
-        " " +
-        windows[this.windowId]
+      this.windowId +
+      " " +
+      windows[this.windowId]
     );
 
     // ovh.net sends a "421 Service not available, closing transmission channel"
@@ -500,9 +491,9 @@ for (const [windowId, data] of Object.entries(windows)) {
     //no
     debug(
       "nsMsgSendListener.onSendNotPerformed: msgId=" +
-        aMsgID +
-        " status=" +
-        aStatus
+      aMsgID +
+      " status=" +
+      aStatus
     );
   },
   onTransportSecurityError(msgID, status, secInfo, location) {
@@ -550,11 +541,11 @@ function resentMessage(
       : false; //workaround web.de
   debug(
     "workaround changeFrom for " +
-      accountId +
-      "|" +
-      identity.key +
-      " is " +
-      changeFrom
+    accountId +
+    "|" +
+    identity.key +
+    " is " +
+    changeFrom
   );
 
   let aScriptableInputStream = Cc[
@@ -575,7 +566,7 @@ function resentMessage(
   let lts; //size of line terminator
 
   let aCopyListener = {
-    onStartRequest: function (aRequest, aContext) {},
+    onStartRequest: function (aRequest, aContext) { },
 
     onStopRequest: function (aRequest, aContext, aStatusCode) {
       // write leftovers
@@ -585,11 +576,11 @@ function resentMessage(
       if (aStatusCode) {
         debug(
           "aCopyListener.onStopRequest failed " +
-            aRequest +
-            ", " +
-            aContext +
-            ", " +
-            aStatusCode
+          aRequest +
+          ", " +
+          aContext +
+          ", " +
+          aStatusCode
         );
         return;
       }
@@ -649,15 +640,22 @@ function resentMessage(
       }
       //TEST End
 
+      //TODO: fixit!
+      if (tmpFile.fileSize == 0) {
+        console.error("SimpleMailRedirection: message has vanished while redirecting, probably you've used filter action 'Move message ...' or 'Delete message'");
+        tmpFile.remove(false);
+        return;
+      }
+
       debug(
         "account=" +
-          accountId +
-          " identity=" +
-          identity.fullName +
-          " <" +
-          identity.email +
-          "> => sender=" +
-          msgCompFields.from
+        accountId +
+        " identity=" +
+        identity.fullName +
+        " <" +
+        identity.email +
+        "> => sender=" +
+        msgCompFields.from
       );
 
       // send a message
@@ -686,7 +684,7 @@ function resentMessage(
         accountId, // char* accountKey,
         msgCompFields, // in nsIMsgCompFields     fields,
         tmpFile, // in nsIFile              sendIFile,
-        true /*!prefs.debug*/, // in PRBool               deleteSendFileOnCompletion,
+        /*true*/!prefs.debug,            // in PRBool               deleteSendFileOnCompletion,
         false, // in PRBool               digest_p,
         msgSend.nsMsgDeliverNow, // in nsMsgDeliverMode     mode,
         null, // in nsIMsgDBHdr          msgToReplace,
@@ -727,13 +725,13 @@ function resentMessage(
         let resenthdrs = getResentHeaders(msgCompFields, identity);
         debug(
           "resent with account=" +
-            accountId +
-            " identity=" +
-            identity.fullName +
-            " <" +
-            identity.email +
-            "> => sender=" +
-            msgCompFields.from
+          accountId +
+          " identity=" +
+          identity.fullName +
+          " <" +
+          identity.email +
+          "> => sender=" +
+          msgCompFields.from
         );
         aFileOutputStream.write(resenthdrs, resenthdrs.length);
       }
@@ -782,9 +780,9 @@ function resentMessage(
                 if (ret !== replyTo.length + 2) {
                   debug(
                     "!! inHeader write error? line len " +
-                      replyTo.length +
-                      ", written " +
-                      ret
+                    replyTo.length +
+                    ", written " +
+                    ret
                   );
                 }
               }
@@ -863,9 +861,9 @@ function resentMessage(
             if (ret !== line.length + 2) {
               debug(
                 "!! inHeader write error? line len " +
-                  line.length +
-                  ", written " +
-                  ret
+                line.length +
+                ", written " +
+                ret
               );
             }
           }
@@ -878,9 +876,9 @@ function resentMessage(
           if (ret !== leftovers.length) {
             debug(
               "!! inBody write error? leftovers len " +
-                leftovers.length +
-                ", written " +
-                ret
+              leftovers.length +
+              ", written " +
+              ret
             );
           }
           leftovers = "";
@@ -992,8 +990,8 @@ msgHdr.folder.addKeywordsToMessages(msg, "redirected");
   }
   debug(
     (onOff ? "added" : "removed") +
-      " keyword, now set to: " +
-      msgHdr.getStringProperty("keywords")
+    " keyword, now set to: " +
+    msgHdr.getStringProperty("keywords")
   );
 
   //set 'redirected' flag to message (available since TB91)
@@ -1009,9 +1007,9 @@ msgHdr.folder.addKeywordsToMessages(msg, "redirected");
     else msgDB.MarkRedirected(msgKey, onOff, null); // up to TB107(?)
     debug(
       (onOff ? "added" : "removed") +
-        " redirected flag, flags now 0x" +
-        msgHdr.flags.toString(16) +
-        " (redirected=0x2000)"
+      " redirected flag, flags now 0x" +
+      msgHdr.flags.toString(16) +
+      " (redirected=0x2000)"
     );
   } catch (e) {
     debug("add redirected flag throws: " + e);

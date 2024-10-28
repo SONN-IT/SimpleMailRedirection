@@ -407,6 +407,14 @@ async function load() {
   //                        else event.target.classList.add('defName');});
 
   let msgSubjects = "";
+  
+  let defacct;
+  try {           //TB>=91
+    defacct=await messenger.accounts.getDefault(false);
+  } catch(e) {    //TB78
+    defacct=await messenger.accounts.getDefault();
+  }
+  
   msgs = await messenger.runtime.sendMessage({
     action: "requestData",
     prefs: prefs,
@@ -416,8 +424,12 @@ async function load() {
   let tbody = mails.firstChild;
   if (tbody.tagName != "tbody") tbody = tbody.nextSibling;
   msgs.forEach((msg) => {
-    origAcctId = msg.folder.accountId; //use account from last mail
-    // TODO: accounts may be different if mails come from a virtual folder
+    if (msg?.external) { //e.g. an .eml file
+      origAcctId=defacct.id;
+    } else {
+      origAcctId=msg.folder.accountId; //use account from last mail
+        // TODO: accounts may be different if mails come from a virtual folder
+    }
     msg.sending = false;
     let d = new Date(msg.date);
     let date = d.toLocaleString();

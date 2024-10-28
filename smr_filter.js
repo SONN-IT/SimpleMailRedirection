@@ -92,7 +92,7 @@ const redirectFilterAction = {
       return extension.localeData.localizeMessage("needvalidaddress"); //'Invalid e-mail address';
     } else return null;
   },
-  applyAction(msgHdrs, actionValue, copyListener, filterType, msgWindow) {
+  async applyAction(msgHdrs, actionValue, copyListener, filterType, msgWindow) {
     //msgHdrs Array<nsIMsgDBHdr>
     //actionValue AUTF8String
     //copyListener nsIMsgCopyServiceListener
@@ -107,9 +107,12 @@ const redirectFilterAction = {
     let msgHdr = msgHdrs[0]; //nsIMsgHdr
     debug("Filter: msghdr=" + msgHdr + " " + msgHdr.messageKey);
     //      let accountId=msgHdr.accountKey;  //is '' :-(
-    let account = MailServices.accounts.FindAccountForServer(
-      msgHdr.folder.server
-    );
+    let account;
+    try {
+      account=MailServices.accounts.findAccountForServer(msgHdr.folder.server); //since TB121
+    } catch(e) {
+      account=MailServices.accounts.FindAccountForServer(msgHdr.folder.server); // upto TB120
+    }
     let accountId = account.key;
     debug("Filter: accountId=" + accountId);
     let identity = account.defaultIdentity;
@@ -117,17 +120,9 @@ const redirectFilterAction = {
     let resent = { TO: actionValue };
     let params = {}; // might be: {copy2sent: true}
     debug("Filter: filterUseCount=" + filterUseCount);
-    msgHdrs.forEach((msgHdr) => {
-      prepareMessage(
-        msgHdr,
-        accountId,
-        identity,
-        params,
-        resent,
-        null /*windowId*/,
-        null /*mh.id*/
-      );
-    });
+    for (msgHdr of msgHdrs) {
+      await prepareMessage(msgHdr, accountId, identity, params, resent, null/*windowId*/, null/*mh.id*/);
+    };
   },
 };
 var redirectFilter = {
@@ -198,7 +193,7 @@ function addCustomFilter() {
         : null;
     },
     allowDuplicates: true,
-    applyAction: function (
+    applyAction: async function (
       msgHdrs,
       actionValue,
       copyListener,
@@ -206,7 +201,7 @@ function addCustomFilter() {
       msgWindow
     ) {
       if (m3p.de_ggbs_SimpleMailRedirect_Filter)
-        m3p.de_ggbs_SimpleMailRedirect_Filter.redirect.applyAction(
+        await m3p.de_ggbs_SimpleMailRedirect_Filter.redirect.applyAction(
           msgHdrs,
           actionValue,
           copyListener,
@@ -215,7 +210,8 @@ function addCustomFilter() {
         );
     },
     isAsync: false, //(if true: copy listener must be used)
-    needsBody: false,
+    needsBody: true //necessary if filter action 'move to folder' or 'delete' is used
+    // also, async is necessary on applyAction
   };
   MailServices.filters.addCustomAction(action);
 }
